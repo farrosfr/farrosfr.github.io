@@ -73,3 +73,12 @@ a {
     color: hsl(var(--primary) / var(--un-text-opacity, 1));
   }
 }
+
+/* Footer Links Accessibility Fix */
+footer a {
+  color: hsl(var(--foreground) / 1); /* Ensure high contrast */
+}
+
+footer a:hover {
+  color: hsl(var(--primary) / var(--un-text-opacity, 1)); /* Keep existing hover style */
+}
