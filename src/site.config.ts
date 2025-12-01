@@ -110,14 +110,10 @@ export const integ: IntegrationUserConfig = {
   },
   // Enable page search function
   pagefind: true,
-  // Add a random quote to the footer (default on homepage footer)
-  // See: https://astro-pure.js.org/docs/integrations/advanced#web-content-render
   quote: {
     server: '',
-    target: ''
-  },
-
-  // UnoCSS typography
+    target: '() => null'
+  },  // UnoCSS typography
   // See: https://unocss.dev/presets/typography
   typography: {
     class: 'prose text-base',

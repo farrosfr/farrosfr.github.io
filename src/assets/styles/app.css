@@ -76,9 +76,9 @@ a {
 
 /* Footer Links Accessibility Fix */
 footer a {
-  color: hsl(var(--foreground) / 1); /* Ensure high contrast */
+  color: hsl(var(--primary) / 1); /* Use primary color for links */
 }
 
 footer a:hover {
-  color: hsl(var(--primary) / var(--un-text-opacity, 1)); /* Keep existing hover style */
+  color: hsl(var(--secondary-foreground) / 1); /* Use secondary color for hover */
 }
