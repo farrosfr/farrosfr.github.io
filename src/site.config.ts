@@ -51,7 +51,6 @@ export const theme: ThemeUserConfig = {
     menu: [
       { title: 'Blog', link: '/blog' },
       { title: 'Projects', link: '/projects' },
-      { title: 'Links', link: '/links' },
       { title: 'About', link: '/about' }
     ]
   },
@@ -96,18 +95,6 @@ export const theme: ThemeUserConfig = {
 export const integ: IntegrationUserConfig = {
   // Links management
   // See: https://astro-pure.js.org/docs/integrations/links
-  links: {
-    logbook: [],
-    // Yourself link info
-    applyTip: [
-      { name: 'Name', val: theme.title },
-      { name: 'Desc', val: theme.description || 'Null' },
-      { name: 'Link', val: 'https://farrosfr.github.io/' },
-      { name: 'Avatar', val: 'https://farrosfr.github.io/favicon/favicon.ico' }
-    ],
-    // Cache avatars in `public/avatars/` to improve user experience.
-    cacheAvatar: false
-  },
   // Enable page search function
   pagefind: true,
   quote: {
