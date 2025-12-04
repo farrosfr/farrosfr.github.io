@@ -76,9 +76,15 @@ a {
 
 /* Footer Links Accessibility Fix */
 footer a {
-  color: hsl(var(--primary) / 1); /* Use primary color for links */
+  /* Use the main text color for high contrast */
+  color: hsl(var(--foreground));
+  /* Add a persistent underline to distinguish links from text */
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 0.2em;
 }
 
 footer a:hover {
-  color: hsl(var(--secondary-foreground) / 1); /* Use secondary color for hover */
+  /* Use the primary color for the hover effect */
+  color: hsl(var(--primary));
 }
