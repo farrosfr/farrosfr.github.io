@@ -1,0 +1,286 @@
+{
+  "portfolio_certificates": {
+    "Cybersecurity": [
+      {
+        "name": "Cyber Security 101 Certificate",
+        "issuer": "TryHackMe",
+        "date": "Oct 2025",
+        "link": "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-USGATTGRLI.pdf"
+      },
+      {
+        "name": "Introduction to Cyber Security Certificate",
+        "issuer": "TryHackMe",
+        "date": "Feb 2025",
+        "link": "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QRGNXAUUOF.pdf"
+      },
+      {
+        "name": "Cybersecurity for Small and Medium Size Business",
+        "issuer": "EC-Council",
+        "date": "Jan 2025",
+        "link": "https://codered.eccouncil.org/certificate/20752b60-d52d-47d5-b72b-e55a33d48ab0"
+      },
+      {
+        "name": "ISC2 Candidate",
+        "issuer": "ISC2",
+        "date": "Jan 2025",
+        "link": "https://www.credly.com/badges/04d99861-c091-4bca-8364-a6b2eae39665"
+      },
+      {
+        "name": "Introduction to Cybersecurity",
+        "issuer": "Cisco",
+        "date": "Jan 2025",
+        "link": "https://www.netacad.com/certificates?issuanceId=a26328ab-abab-403d-80c1-c0be6232eb83"
+      },
+      {
+        "name": "Pre Security Certificate",
+        "issuer": "TryHackMe",
+        "date": "Jan 2025",
+        "link": "https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-OA1PBQOMP7.pdf"
+      },
+      {
+        "name": "Introduction to Information Security",
+        "issuer": "Cyber Academy Indonesia",
+        "date": "Mar 2024",
+        "link": "https://www.cyberacademy.id/certificate/PKMI01103240785"
+      }
+    ],
+    "Artificial_Intelligence_AI": [
+      {
+        "name": "Foundations of Prompt Engineering",
+        "issuer": "Amazon Web Services (AWS)",
+        "date": "Jul 2024",
+        "link": "https://drive.google.com/file/d/18l2bv95kbeIa3jMqDecYrYguPjJ7I2MA/view?usp=sharing"
+      },
+      {
+        "name": "Introduction to Generative AI - Art of the Possible",
+        "issuer": "Amazon Web Services (AWS)",
+        "date": "Jul 2024",
+        "link": "https://drive.google.com/file/d/1MGFWD9bIFjJSWcCq4ZL9EWyW0oRz7UgN/view?usp=sharing"
+      },
+      {
+        "name": "Introduction to Responsible AI",
+        "issuer": "Google",
+        "date": "Jul 2024",
+        "link": "https://www.cloudskillsboost.google/public_profiles/3fcc1399-76c8-4171-b6d0-d9cd8a267c40/badges/9949524?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share"
+      },
+      {
+        "name": "Developing AI Systems with the OpenAI API",
+        "issuer": "DataCamp",
+        "date": "May 2024",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/6313a807c0a42a167311fa7197586071ac7de0ce?raw=1"
+      },
+      {
+        "name": "ChatGPT Prompt Engineering for Developers",
+        "issuer": "DataCamp",
+        "date": "Apr 2024",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/0993396104443de05251662e1d18d5cc4103009b"
+      },
+      {
+        "name": "Working with the OpenAI API",
+        "issuer": "DataCamp",
+        "date": "Apr 2024",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/f25bd936f8f32533be07c6b1d56c94492c2118d1?raw=1"
+      }
+    ],
+    "Data_Science_and_Database": [
+      {
+        "name": "SQL (Basic)",
+        "issuer": "HackerRank",
+        "date": "Jan 2022",
+        "link": "https://www.hackerrank.com/certificates/0097302c1bec"
+      },
+      {
+        "name": "Data Science Math Skills",
+        "issuer": "Duke University",
+        "date": "May 2020",
+        "link": "https://www.coursera.org/account/accomplishments/records/W4GRV9ZAEUJQ"
+      },
+      {
+        "name": "Intermediate SQL Queries",
+        "issuer": "DataCamp",
+        "date": "May 2020",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/013c167c6f4de90be2a7be73386f062ea19063f5"
+      },
+      {
+        "name": "Introduction to Data Science with R",
+        "issuer": "DQLab",
+        "date": "Apr 2020",
+        "link": "https://academy.dqlab.id/certificate/pdf/DQLABBGINRJLPRRN"
+      },
+      {
+        "name": "Introduction to R",
+        "issuer": "DataCamp",
+        "date": "Feb 2020",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/66750d4b25c0007f1e9235df6ba210b3c9b51c7d"
+      },
+      {
+        "name": "SQL",
+        "issuer": "Sololearn",
+        "date": "Feb 2020",
+        "link": "https://www.sololearn.com/certificates/CT-4IRGEZC5"
+      },
+      {
+        "name": "Data Engineering Bootcamp",
+        "issuer": "PT Multipolar Technology Tbk",
+        "date": "Nov 2019",
+        "link": "https://drive.google.com/file/d/1-tJgXTy3M-zeZoFtbZ98pEhDWkKs9PEA/view?usp=drivesdk"
+      },
+      {
+        "name": "R Programming for Data Science",
+        "issuer": "iData1011 Data Science Community",
+        "date": "Apr 2019",
+        "link": "https://drive.google.com/file/d/1-zPLIIBDON87J1ESdFG9vt0WoUvVcR6b/view?usp=drivesdk"
+      }
+    ],
+    "Cloud_Computing": [
+      {
+        "name": "Azure Fundamentals",
+        "issuer": "Microsoft",
+        "date": "Jan 2022",
+        "link": "https://learn.microsoft.com/id-id/users/farrosfr/credentials/a05b92e878c7edd9?ref=https%3A%2F%2Fwww.linkedin.com%2F"
+      },
+      {
+        "name": "Cloud Computing Basics (Cloud 101)",
+        "issuer": "LearnQuest",
+        "date": "May 2020",
+        "link": "https://www.coursera.org/account/accomplishments/records/NJWBFGLHAQ8R"
+      },
+      {
+        "name": "Getting Started with AWS Machine Learning",
+        "issuer": "Amazon Web Services (AWS)",
+        "date": "May 2020",
+        "link": "https://www.coursera.org/account/accomplishments/records/WMHRMHFV2NY8"
+      }
+    ],
+    "Web_Development": [
+      {
+        "name": "Responsive Web Design",
+        "issuer": "freeCodeCamp",
+        "date": "Mar 2024",
+        "link": "https://www.freecodecamp.org/certification/farrosfr/responsive-web-design"
+      },
+      {
+        "name": "CSS",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-8TRCGMEF"
+      },
+      {
+        "name": "PHP",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-QFMXTT1Q"
+      },
+      {
+        "name": "jQuery",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-CAPPG2VQ"
+      },
+      {
+        "name": "JavaScript",
+        "issuer": "Sololearn",
+        "date": "Feb 2020",
+        "link": "https://www.sololearn.com/certificates/CT-FQRKAPG6"
+      },
+      {
+        "name": "HTML",
+        "issuer": "Sololearn",
+        "date": "Aug 2017",
+        "link": "https://www.sololearn.com/certificates/CT-WCVPN0XC"
+      }
+    ],
+    "Programming_Languages_General": [
+      {
+        "name": "Introduction to Shell",
+        "issuer": "DataCamp",
+        "date": "May 2020",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/e51beb5d553357742c7a3df6f6f054f0a846cc0d"
+      },
+      {
+        "name": "C",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-R6PZMYZZ"
+      },
+      {
+        "name": "C#",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-3D1HIAX0"
+      },
+      {
+        "name": "C++",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-VZFKJ7AL"
+      },
+      {
+        "name": "Ruby",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-MNS2FEYB"
+      },
+      {
+        "name": "Java",
+        "issuer": "Sololearn",
+        "date": "Feb 2020",
+        "link": "https://www.sololearn.com/certificates/CT-HWUZMITZ"
+      },
+      {
+        "name": "Python Core",
+        "issuer": "Sololearn",
+        "date": "Feb 2020",
+        "link": "https://www.sololearn.com/certificates/CT-FWYX6AZB"
+      },
+      {
+        "name": "Introduction to Python",
+        "issuer": "DataCamp",
+        "date": "Nov 2018",
+        "link": "https://www.datacamp.com/statement-of-accomplishment/course/dd4028d65a32021e2bcbda41d91ae0044f145c6e?raw=1"
+      }
+    ],
+    "Digital_Marketing_and_Analytics": [
+      {
+        "name": "Digital Marketing Training",
+        "issuer": "Swaragama Training Center",
+        "date": "Oct 2024",
+        "link": "https://drive.google.com/file/d/1LE1GmYI_8BBAEjUhDultlS8w6DIQmwQd/view"
+      },
+      {
+        "name": "Advance Google Analytics",
+        "issuer": "Google",
+        "date": "Apr 2020",
+        "link": "https://analytics.google.com/analytics/academy/certificate/gLB9E94kSMStij81ioLk5Q"
+      },
+      {
+        "name": "Google Analytics for Beginners",
+        "issuer": "Google",
+        "date": "Apr 2020",
+        "link": "https://analytics.google.com/analytics/academy/certificate/mL2FFMHVQAG5_OEm8pxpAA"
+      },
+      {
+        "name": "The Fundamentals of Digital Marketing",
+        "issuer": "Google Digital Garage",
+        "date": "Apr 2020",
+        "link": "https://drive.google.com/open?id=1DbAwCpiDMZTpTscTFdlAORV3GS4mSm6Q"
+      }
+    ],
+    "Mobile_Development": [
+      {
+        "name": "Swift 4",
+        "issuer": "Sololearn",
+        "date": "Apr 2020",
+        "link": "https://www.sololearn.com/certificates/CT-INORLI9B"
+      }
+    ],
+    "Internet_of_Things_IoT": [
+      {
+        "name": "Fresh Graduate Academy Internet of Things",
+        "issuer": "Digital Talent Scholarship",
+        "date": "Aug 2019",
+        "link": "https://drive.google.com/open?id=11KEiT6UmrAZd1SQkL3ePOyR_4T0An4vz"
+      }
+    ]
+  }
+}

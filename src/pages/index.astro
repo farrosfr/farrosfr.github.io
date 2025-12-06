@@ -11,9 +11,36 @@ import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
 import config from '@/site-config'
 
-const languages = ['Html', 'JavaScript', 'CSS', 'Shell']
-const frontend = ['TypeScript', 'Vite', 'Webpack', 'Astro']
-const backend = ['Vercel', 'Waline']
+const languages = [
+  'Python', 
+  'R', 
+  'SQL', 
+  'C#',
+  'JavaScript', 
+  'Shell/Bash'
+];
+
+const aiAndData = [
+  'ETL Pipelines',
+  'Data Visualization',
+  'Machine Learning',
+  'Prompt Engineering', 
+];
+
+const cloudAndSec = [
+  'AWS',
+  'Azure', 
+  'Linux', 
+  'Network Security'
+];
+
+const webDevelopment = [
+  'HTML & CSS', 
+  'PHP', 
+  'TypeScript', 
+  'Astro', 
+  'React/Vite' 
+];
 
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
@@ -43,16 +70,32 @@ if (!images[imagePath])
       <div class='flex flex-col items-center gap-y-4'>
         <h1 class='text-3xl font-bold'>{config.author}</h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
-          <Label title='Indonesia'>
-            <Icon name='location' class='size-5' slot='icon' />
-          </Label>
           <Label
-            title='Source code'
+            title='GitHub'
             as='a'
-            href='https://github.com/farrosfr/farrosfr.github.io'
+            href='https://github.com/farrosfr'
             target='_blank'
           >
             <Icon name='github' class='size-5' slot='icon' />
+          </Label>
+          
+          <Label
+            title='LinkedIn'
+            as='a'
+            href='https://www.linkedin.com/in/farrosfr/' 
+            target='_blank'
+          >
+            <Icon name='link' class='size-5' slot='icon' />
+          </Label>
+
+  
+          <Label
+            title='Email Me'
+            as='a'
+            href='mailto:hello@farrosfr.com'
+            target='_blank'
+          >
+            <Icon name='email' class='size-5' slot='icon' />
           </Label>
         </div>
       </div>
@@ -65,7 +108,7 @@ if (!images[imagePath])
         <p class='text-muted-foreground'>Web Builder / Security Enthusiast</p>
         <p class='text-muted-foreground'>
           A web builder specializing in high-performance websites using meta-frameworks like Astro.
-          In cybersecurity, focused on offensive security and common vulnerabilities such as SQLi and XSS.
+          In cybersecurity, focused on offensive security and common vulnerabilities.
           This blog shares various findings and insights.
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
@@ -131,22 +174,34 @@ if (!images[imagePath])
       <Section title='Website List'>
         <div class='grid grid-cols-1 gap-3 sm:grid-cols-2'>
           <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='Do not go gentle into that good night'
-            imagePath='/src/assets/projects/1.jpg'
+            href='https://aesi.or.id'
+            heading='AESI'
+            subheading='Asosiasi Energi Surya Indonesia'
+            imagePath='/src/assets/projects/aesi.png'
           />
           <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='Old age burn and rave at close of day'
-            imagePath='/src/assets/projects/2.jpg'
+            href='https://aurora-nutrima.id'
+            heading='Aurora Nutrima'
+            subheading='B2B Industrial Catering Services'
+            imagePath='/src/assets/projects/aurora.png'
           />
           <ProjectCard
-            href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'
-            heading='Lorem ipsum'
-            subheading='Rage, rage against the dying of the light'
-            imagePath='/src/assets/projects/3.jpg'
+            href='https://kidiko.id'
+            heading='Kidiko'
+            subheading='AI Educational Platform in Indonesia'
+            imagePath='/src/assets/projects/kidiko.png'
+          />
+          <ProjectCard
+            href='https://astro.solar-nusantara.id'
+            heading='Solar Nusantara'
+            subheading='Renewable Energy EPC & Solutions'
+            imagePath='/src/assets/projects/sonus.png'
+          />
+          <ProjectCard
+            href='https://astro.sonushub.id'
+            heading='SonusHUB'
+            subheading='B2B Marketplace for Electrical & Solar'
+            imagePath='/src/assets/projects/sonushub.png'
           />
           <ProjectCard
             href='/projects'
@@ -160,52 +215,18 @@ if (!images[imagePath])
       <Section title='Certifications'>
         <Card
           as='a'
-          heading='Cyber Security 101 Certificate by TryHackMe'
-          date="Feb 2025"
-          href='https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-USGATTGRLI.pdf'
-          target='_blank'
-        />
-        <Card
-          as='a'
-          heading='Introduction to Cyber Security Certificate by TryHackMe'
-          date="Feb 2025"
-          href='https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-QRGNXAUUOF.pdf'
-          target='_blank'
-        />
-        <Card
-          as='a'
-          heading='Cybersecurity for Small and Medium Size Business by EC-Council'
-          date="Jan 2025"
-          href='https://codered.eccouncil.org/certificate/20752b60-d52d-47d5-b72b-e55a33d48ab0'
-          target='_blank'
-        />
-        <Card
-          as='a'
-          heading='Pre Security Certificate by TryHackMe'
-          date="Jan 2025"
-          href='https://tryhackme-certificates.s3-eu-west-1.amazonaws.com/THM-OA1PBQOMP7.pdf'
-          target='_blank'
-        />
-        <Card
-          as='a'
-          heading='Introduction to Cybersecurity by Cisco Networking Academy'
-          date='Jan 2025'
-          href='https://www.netacad.com/certificates?issuanceId=a26328ab-abab-403d-80c1-c0be6232eb83'
-          target='_blank'
-        />
-        <Card
-          as='a'
-          heading='Introduction to Information Security by Cyber Academy Indonesia'
-          date="Mar 2024"
-          href='https://www.cyberacademy.id/certificate/PKMI01103240785'
-          target='_blank'
+          heading='Continuous Learning'
+          subheading='Exploring various domains including Cybersecurity, AI, Data Science, Cloud, and Web Development, complemented by a collection of certifications.'
+          date='2017 - Present'
+          href='/about'
         />
       </Section>
 
       <Section title='Skills'>
-        <SkillLayout title='Languages' skills={languages} />
-        <SkillLayout title='Frontend' skills={frontend} />
-        <SkillLayout title='Backend' skills={backend} />
+        <SkillLayout title='Programming' skills={languages} />
+        <SkillLayout title='AI & Data Science' skills={aiAndData} />
+        <SkillLayout title='Cloud & Security' skills={cloudAndSec} />
+        <SkillLayout title='Web Development' skills={webDevelopment} />
       </Section>
     </div>
     {/* <Quote class='mt-12' /> */}
