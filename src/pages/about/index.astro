@@ -3,11 +3,7 @@ import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
-
-const languages = ['Python', 'R', 'SQL', 'C#', 'JavaScript', 'Shell/Bash'];
-const aiAndData = ['ETL Pipelines', 'Data Visualization', 'Machine Learning', 'Prompt Engineering'];
-const cloudAndSec = ['AWS', 'Azure', 'Linux', 'Network Security'];
-const webDevelopment = ['HTML & CSS', 'PHP', 'TypeScript', 'Astro', 'React/Vite'];
+import certificates from './cert.json'
 
 const headings = [
   { depth: 2, slug: 'education', text: 'Education' },
@@ -18,15 +14,14 @@ const headings = [
 ]
 ---
 
-<PageLayout title='About' {headings} comment>
+<PageLayout title='About' {headings} comment={false}>
   <p>Web Builder / Security Enthusiast</p>
   <p>
     A web builder specializing in high-performance websites using meta-frameworks like Astro.
     In cybersecurity, focused on offensive security and common vulnerabilities.
     This blog shares various findings and insights.
   </p>  
-
-  {/* education */}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+                                                  
   <p>
     My motto: Stay hungry, Stay foolish. 
     <Spoiler>Exploring the boundaries of code and security.</Spoiler>
@@ -49,123 +44,26 @@ const headings = [
     </li>
   </ul>
 
-  {/* tools */}
-  <h2 id='tools'>Tools</h2>
-  <p>Current support tools as follow:</p>
-  <ToolSection
-    class='mb-5'
-    title='Design'
-    tools={[
-      {
-        name: 'Photoshop',
-        description: 'Picture Editing',
-        href: 'https://www.adobe.com/products/photoshop',
-        icon: import('@/assets/tools/photoshop.svg?raw')
-      },
-      {
-        name: 'Illustrator',
-        description: 'Vector Drawing',
-        href: 'https://www.adobe.com/products/illustrator',
-        icon: import('@/assets/tools/illustrator.svg?raw')
-      },
-      {
-        name: 'After Effects',
-        description: 'Motion Graphics',
-        href: 'https://www.adobe.com/products/aftereffects',
-        icon: import('@/assets/tools/aftereffects.svg?raw')
-      },
-      {
-        name: 'Premiere Pro',
-        description: 'Video Editing',
-        href: 'https://www.adobe.com/products/premiere',
-        icon: import('@/assets/tools/premiere.svg?raw')
-      }
-    ]}
-  />
-  <ToolSection
-    class='mb-5'
-    title='Productivity'
-    tools={[
-      {
-        name: 'Chrome',
-        description: 'Browser',
-        href: 'https://www.google.com/chrome/',
-        icon: import('@/assets/tools/chrome.svg?raw')
-      },
-      {
-        name: 'Firefox',
-        description: 'Browser',
-        href: 'https://www.mozilla.org/en-US/firefox',
-        icon: import('@/assets/tools/firefox.svg?raw')
-      },
-      {
-        name: 'Notion',
-        description: 'Note Taking',
-        href: 'https://www.notion.so/',
-        icon: import('@/assets/tools/notion.svg?raw')
-      },
-      {
-        name: 'Typora',
-        description: 'Markdown Editor',
-        href: 'https://typora.io/',
-        icon: import('@/assets/tools/typora.svg?raw')
-      }
-    ]}
-  />
-  <ToolSection
-    class='mb-5'
-    title='Development'
-    tools={[
-      {
-        name: 'VS Code',
-        description: 'IDE',
-        href: 'https://code.visualstudio.com/',
-        icon: import('@/assets/tools/vscode.svg?raw')
-      },
-      {
-        name: 'Neovim',
-        description: 'IDE',
-        href: 'https://neovim.io/',
-        icon: import('@/assets/tools/neovim.svg?raw')
-      },
-      {
-        name: 'Sublime Text',
-        description: 'IDE',
-        href: 'https://www.sublimetext.com/',
-        icon: import('@/assets/tools/sublime.svg?raw')
-      }
-    ]}
-  />
-  <ToolSection
-    class='mb-5'
-    title='Environment'
-    tools={[
-      {
-        name: 'Arch Linux',
-        description: 'Linux Distribution',
-        href: 'https://archlinux.org/',
-        icon: import('@/assets/tools/archlinux.svg?raw')
-      },
-      {
-        name: 'Ubuntu 24.04 LTS',
-        description: 'Linux Distribution',
-        href: 'https://ubuntu.com/',
-        icon: import('@/assets/tools/ubuntu.svg?raw')
-      },
-      {
-        name: 'MacOS Tahoe',
-        description: 'MacBook Air',
-        href: 'https://www.apple.com/macos/',
-        icon: import('@/assets/tools/apple.svg?raw')
-      },
-      {
-        name: 'Windows 11',
-        description: 'Framework Laptop 16',
-        href: 'https://news.microsoft.com/windows11-general-availability/',
-        icon: import('@/assets/tools/windows11.svg?raw')
-      }
-    ]}
-  />
+  {/* certificates */}
+  <h2 id='certificates'>Certificates</h2>
+  {
+    Object.entries(certificates.portfolio_certificates).map(([category, certs]) => (
+      <div class='mb-6'>
+        <h3 class='text-xl font-semibold mb-3'>{category.replace(/_/g, ' ')}</h3>
+        <ul class='flex flex-col gap-y-2'>
+          {(certs as any[]).map(cert => (
+            <li class='flex items-baseline gap-x-3 text-muted-foreground'>
+              <span class='text-sm tabular-nums w-[65px]'>{cert.date}</span>
+              <a href={cert.link} target='_blank' rel='noopener noreferrer' class='text-foreground hover:underline'>
+                <span>{cert.name}</span>
+                <span class='text-sm text-muted-foreground'> by {cert.issuer}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
 
   {/* social-networks */}
   <h2 id='social-networks'>Social Networks</h2>
