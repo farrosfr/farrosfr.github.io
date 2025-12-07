@@ -61,7 +61,7 @@ const headings = [
         <ul class='flex flex-col gap-y-2'>
           {(certs as any[]).map(cert => (
             <li class='flex items-baseline gap-x-3 text-muted-foreground'>
-              <span class='text-sm tabular-nums w-[80px]'>{cert.date}</span>
+              <span class='text-sm tabular-nums w-[80px] hidden sm:inline-block'>{cert.date}</span>
               <a href={cert.link} target='_blank' rel='noopener noreferrer' class='text-foreground hover:underline'>
                 <span>{cert.name}</span>
                 <span class='text-sm text-muted-foreground'> by {cert.issuer}</span>

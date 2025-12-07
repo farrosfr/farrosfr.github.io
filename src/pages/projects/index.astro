@@ -11,10 +11,7 @@ import KeyIcon from '@/assets/icons/key.svg'
 import wechat from '@/assets/wechat-qrcode.jpg'
 
 const headings = [
-  { depth: 2, slug: 'programs', text: 'Programs' },
-  { depth: 2, slug: 'learnings', text: 'Learnings' },
-  { depth: 2, slug: 'others', text: 'Others' },
-  { depth: 2, slug: 'gpg-signature', text: 'GPG Signature' },
+  { depth: 2, slug: 'websites', text: 'Websites' },
   { depth: 2, slug: 'sponsorship', text: 'Sponsorship' }
 ]
 ---
@@ -23,133 +20,82 @@ const headings = [
   <p>Github Activities:</p>
   <p>
     <Image
-      src='https://ghchart.rshah.org/659eb9/cworld1'
+      src='https://ghchart.rshah.org/659eb9/farrosfr'
       alt='github activities'
       inferSize
       loading='lazy'
     />
   </p>
   <p>
-    If you think it would be useful or interesting to collaborate on a project, you can donate to
-    support my work or contact me to discuss a project.
+    Below is a list of websites I've built and managed. If you find my work useful, consider supporting me!
   </p>
-  <Button title='Checkout sponsorship' class='w-fit' href='#sponsorship'>
-    <Icon class='size-5' name='receive-money' slot='before' />
-  </Button>
 
-  <h2 id='programs'>Programs</h2>
+  <h2 id='websites'>Websites</h2>
   <ProjectSection
     projects={[
       {
-        name: '🎨 Astro Theme Pure',
-        description: 'A simple, fast and powerful blog & document theme built by Astro',
+        name: 'AESI',
+        description: 'Asosiasi Energi Surya Indonesia',
         links: [
-          { type: 'github', href: 'https://github.com/cworld1/astro-theme-pure' },
-          { type: 'site', href: 'https://astro-pure.js.org/' },
-          { type: 'doc', href: 'https://astro-pure.js.org/docs/list' },
-          { type: 'release', href: 'https://www.npmjs.com/package/astro-pure' }
+          { type: 'site', href: 'https://aesi.or.id' },
+          { type: 'doc', href: 'https://docs.google.com/document/d/1cG2LtkWJAHdSLax2pBLpHzBexu4QehcuTG0okEEy3S0' }
         ]
       },
       {
-        name: '💄 PKU Art',
-        description: 'A script to beautify pku course website',
-        links: [
-          { type: 'github', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'site', href: 'https://github.com/zhuozhiyongde/pku-art' },
-          { type: 'doc', href: 'https://docs.arthals.ink/docs/pku-art' }
-        ]
-      }
-    ]}
-  />
-  <Collapse title='Some old projects'>
-    <ProjectSection
-      projects={[
-        {
-          name: 'Search Switcher',
-          description: 'Add links to each other in search engines',
-          links: [{ type: 'github', href: 'https://github.com/cworld1/search-switcher' }]
-        },
-        {
-          name: 'Pure Baidu',
-          description: 'Baidu search page beautification module',
-          links: [
-            { type: 'doc', href: 'https://cworld0.com/blog/pure-baidu' },
-            { type: 'site', href: 'https://userstyles.org/styles/173673/pure' }
-          ]
-        }
-      ]}
-    />
-  </Collapse>
-
-  <h2 id='learnings'>Learnings</h2>
-  <ProjectSection
-    class='my-2'
-    projects={[
-      {
-        name: 'Rust Learning',
-        description: 'Some notes and code about CWorld learning Rust',
-        links: [{ type: 'github', href: 'https://github.com/cworld1/rust-learning' }]
+        name: 'Aurora Nutrima',
+        description: 'B2B Industrial Catering Services',
+        links: [{ type: 'site', href: 'https://aurora-nutrima.id' }]
       },
       {
-        name: 'CS 213 Learning',
-        description: 'Notes, code and experiences for Introduction to Computer Systems course',
+        name: 'Kidiko',
+        description: 'AI Educational Platform in Indonesia',
+        links: [{ type: 'site', href: 'https://kidiko.id' }]
+      },
+      {
+        name: 'Solar Nusantara',
+        description: 'Renewable Energy EPC & Solutions',
         links: [
-          {
-            type: 'github',
-            href: 'https://github.com/zhuozhiyongde/Introduction-To-Computer-System-2023Fall-PKU'
-          }
+          { type: 'site', href: 'https://astro.solar-nusantara.id' },
+          { type: 'github', href: 'https://github.com/farrosfr/astro-solar-nusantara' },
+          { type: 'doc', href: 'https://github.com/farrosfr/astro-solar-nusantara/blob/main/README.md' }
+        ]
+      },
+      {
+        name: 'SonusHUB',
+        description: 'B2B Marketplace for Electrical & Solar',
+        links: [
+          { type: 'site', href: 'https://astro.sonushub.id' },
+          { type: 'github', href: 'https://github.com/farrosfr/astro-kiw' },
+          { type: 'doc', href: 'https://github.com/farrosfr/astro-kiw/blob/main/README.md' }
+        ]
+      },
+      {
+        name: 'Indonesia Terang',
+        description: 'Energy & Sustainability Solutions',
+        links: [
+          { type: 'site', href: 'https://indonesia-terang.id' }
         ]
       }
     ]}
   />
 
-  <h2 id='others'>Others</h2>
-  <ProjectSection
-    projects={[
-      {
-        name: 'CWorld',
-        description: "CWorld's Github",
-        links: [{ type: 'github', href: 'https://github.com/cworld1' }]
-      },
-      {
-        name: 'Arthals',
-        description: 'Arthals Github',
-        links: [{ type: 'github', href: 'https://github.com/zhuozhiyongde' }]
-      }
-    ]}
-  />
-
-  <!-- gpg signature -->
-  <h2 id='gpg-signature'>GPG Signature</h2>
-  <p>
-    You can verify the authenticity of the files I signed by checking the GPG signature. My GPG key
-    is <code>114514</code>, and you can find it on the opengpg key servers or download from it.
-  </p>
-  <Button href='https://keys.openpgp.org/search?q=114514' title='Checkout my key' target='_blank'>
-    <KeyIcon class='size-5' slot='before' />
-  </Button>
-
-  <!-- sponsorship -->
   <h2 id='sponsorship'>Sponsorship</h2>
-  <p>Please leave a message or contact me proactively after sponsorship.</p>
-  <Sponsorship
-    methods={[
-      { name: 'WeChat', icon: 'wechat-pay', image: wechat },
-      { name: 'Alipay', icon: 'alipay', image: alipay }
-    ]}
-  />
-  <p>Thanks to the following sponsors:</p>
-  <Sponsors
-    progressMax={25}
-    sponsors={[
-      { name: 'Arthals', platform: 'Wechat', amount: 50, date: '2025-11-06' },
-      { name: '顾**', platform: 'Wechat', amount: 28, date: '2025-06-23' },
-      { name: 'Anonymous', platform: 'Wechat', amount: 20, date: '2022-04-06' },
-      { name: '华雄 (1300****71)', platform: 'QQ', amount: 5, date: '2019-12-30' },
-      { name: '◌ (1934****45)', platform: 'QQ', amount: 3, date: '2019-12-30' },
-      { name: 'C*a (酷安@暴走の蜗牛)', amount: 2, date: '2019-07-02' }
-    ]}
-  />
+  <p>If you enjoy my work or find it helpful, please consider supporting me. It helps me to dedicate more time to open source and creating content.</p>
+  <div class="flex flex-wrap gap-4 mt-4">
+    {/* Tombol Ko-fi */}
+    <Button href='https://ko-fi.com/farrosfr' title='Support me on Ko-fi' target='_blank'>
+      <svg slot="before" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M23.881 9.155c-.956-2.578-3.085-3.812-6.603-3.812h-2.51c-.052-1.895-.295-3.328-3.235-4.573C10.744.407 10.323.23 9.77.127 6.772-.429 2.508 1.488 2.508 1.488S.617 2.636.143 3.65c-.689 1.48-.689 4.383 1.84 8.07 1.83 2.662 3.864 3.778 4.672 4.152.028 1.08.136 3.605.352 3.992.368.66 1.41.972 2.766.972 2.396 0 2.91-2.126 3.037-3.81 2.894-.482 6.096-2.19 6.815-4.32.338-1.002.388-2.585.256-3.55zm-6.19 1.62c-.773 2.115-4.044 3.42-6.527 3.42-1.42 0-2.347.168-2.653 2.34-.14 1.002-.32 1.408-.66 1.408-.316 0-.52-.39-.52-1.47 0-1.432.227-2.905 1.066-4.095.428-.61 1.77-2.31 1.77-2.31s1.17-1.393 2.72-1.928c1.552-.534 2.962.067 3.66.758.7.69 1.572 1.07 1.572 1.07s.794-.035.794-.526c0-.52-.33-1.824-2.22-2.342-1.892-.518-2.45-.484-3.57-.45-1.12.035-2.618.328-3.655 1.296-1.036.968-3.593 4.39-3.593 4.39s-1.87-2.266-1.575-3.92c.294-1.655 2.19-2.284 2.19-2.284s2.89-1.382 5.064-.95c2.174.432 2.624 1.83 2.66 2.054.21 1.296 2.936 1.33 3.484 1.33 1.33 0 2.502.812 2.502.812s-.016 1.157-.514 1.4z"/>
+      </svg>
+    </Button>
+
+    {/* Tombol PayPal */}
+    <Button href='https://paypal.me/farrosfr' title='Support me on PayPal' target='_blank'>
+      <svg slot="before" class="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.946 5.05-4.336 6.795-9.077 6.795H8.86a.641.641 0 0 0-.633.74l1.209 7.27z"/>
+      </svg>
+    </Button>
+  </div>
 </PageLayout>
 
 <style>
