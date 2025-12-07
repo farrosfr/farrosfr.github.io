@@ -5,10 +5,16 @@ import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 import certificates from './cert.json'
 
+const certCategories = Object.keys(certificates.portfolio_certificates).map(category => ({
+  depth: 3,
+  slug: `cert-${category.toLowerCase().replace(/_/g, '-')}`,
+  text: category.replace(/_/g, ' ')
+}));
+
 const headings = [
-  { depth: 2, slug: 'education', text: 'Education' },
-  { depth: 2, slug: 'skills', text: 'Skills' },
   { depth: 2, slug: 'hobbies', text: 'Hobbies' },
+  { depth: 2, slug: 'certificates', text: 'Certificates' },
+  ...certCategories,
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
   { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
@@ -49,11 +55,11 @@ const headings = [
   {
     Object.entries(certificates.portfolio_certificates).map(([category, certs]) => (
       <div class='mb-6'>
-        <h3 class='text-xl font-semibold mb-3'>{category.replace(/_/g, ' ')}</h3>
+        <h3 class='text-xl font-semibold mb-3' id={`cert-${category.toLowerCase().replace(/_/g, '-')}`}>{category.replace(/_/g, ' ')}</h3>
         <ul class='flex flex-col gap-y-2'>
           {(certs as any[]).map(cert => (
             <li class='flex items-baseline gap-x-3 text-muted-foreground'>
-              <span class='text-sm tabular-nums w-[65px]'>{cert.date}</span>
+              <span class='text-sm tabular-nums w-[80px]'>{cert.date}</span>
               <a href={cert.link} target='_blank' rel='noopener noreferrer' class='text-foreground hover:underline'>
                 <span>{cert.name}</span>
                 <span class='text-sm text-muted-foreground'> by {cert.issuer}</span>
