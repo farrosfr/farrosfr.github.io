@@ -38,7 +38,7 @@ await Promise.all(stats.map(fetchCount))
 
 <div class='grid grid-cols-1 gap-3 rounded-xl border p-2 sm:grid-cols-2 sm:p-3'>
   {
-    stats.map(({ link, platform, icon, color, count, text }) => (
+    stats.map(({ link, platform, icon, color, count, text, api }) => (
       <a
         class='group text-muted-foreground no-underline'
         href={link}
@@ -50,14 +50,14 @@ await Promise.all(stats.map(fetchCount))
           <div class='flex-1 text-foreground transition-colors group-hover:text-primary'>
             {platform}
           </div>
-          {count ? (
+          {count || count === 0 ? (
             <div class='flex items-center gap-1.5'>
               <samp>{count}</samp>
               <span class='text-sm font-normal'>{text}</span>
             </div>
-          ) : (
-            'null'
-          )}
+          ) : !api ? (
+            <span class='text-sm font-normal'>{text}</span>
+          ) : null}
         </div>
       </a>
     ))

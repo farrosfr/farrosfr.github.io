@@ -4,37 +4,49 @@ import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
 
+const languages = ['Python', 'R', 'SQL', 'C#', 'JavaScript', 'Shell/Bash'];
+const aiAndData = ['ETL Pipelines', 'Data Visualization', 'Machine Learning', 'Prompt Engineering'];
+const cloudAndSec = ['AWS', 'Azure', 'Linux', 'Network Security'];
+const webDevelopment = ['HTML & CSS', 'PHP', 'TypeScript', 'Astro', 'React/Vite'];
+
 const headings = [
+  { depth: 2, slug: 'education', text: 'Education' },
+  { depth: 2, slug: 'skills', text: 'Skills' },
   { depth: 2, slug: 'hobbies', text: 'Hobbies' },
-  { depth: 2, slug: 'tools', text: 'Tools' },
   { depth: 2, slug: 'social-networks', text: 'Social Networks' },
-  { depth: 2, slug: 'gossips', text: 'Gossips' },
   { depth: 2, slug: 'about-blog', text: 'About Blog' }
 ]
 ---
 
 <PageLayout title='About' {headings} comment>
-  <p>Developer / Designer</p>
+  <p>Web Builder / Security Enthusiast</p>
   <p>
-    Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum
-    dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel, at eum oratio
-    possit voluptatum.
-  </p>
-  <p>
-    My motto: Stay hungry, Stay foolish. <Spoiler>这里可以夹私货，比如为什么要演奏春日影！</Spoiler>
-  </p>
-  <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' variant='ahead' />
+    A web builder specializing in high-performance websites using meta-frameworks like Astro.
+    In cybersecurity, focused on offensive security and common vulnerabilities.
+    This blog shares various findings and insights.
+  </p>  
 
-  {/* general-talk */}
+  {/* education */}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+  <p>
+    My motto: Stay hungry, Stay foolish. 
+    <Spoiler>Exploring the boundaries of code and security.</Spoiler>
+  </p>
+
+  <div class="flex gap-2">
+    <Button title='Sponsor Me' class='w-fit' href='/projects#sponsorship' variant='ahead' />
+    <Button title='Download CV' class='w-fit' href='/CV_FarrosFR.pdf' variant='ahead' />
+  </div>
+
+  
   <h2 id='hobbies'>Hobbies</h2>
+  <p>Outside of coding and security research, I focus on building physical strength and discipline:</p>
   <ul>
-    <li>Lorem ipsum dolor sit amet, vidit suscipit at mei.</li>
     <li>
-      Quem denique mea id. Usu ei regione indoctum dissentiunt, cu meliore fuisset mei, vel quod
-      voluptua ne.
+      <strong>Calisthenics</strong>: Mastering bodyweight control and functional strength.
     </li>
-    <li>Ex dicat impedit mel, at eum oratio possit voluptatum.</li>
-    <li>Impetus fuisset ullamcorper pri cu, his posse iisque ad, aliquam honestatis usu id.</li>
+    <li>
+      <strong>Shadow Boxing</strong>: Sharpening reflexes, technique, and mental focus.
+    </li>
   </ul>
 
   {/* tools */}
@@ -158,52 +170,89 @@ const headings = [
   {/* social-networks */}
   <h2 id='social-networks'>Social Networks</h2>
   <p>
-    Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum
-    dissentiunt, cu meliore fuisset mei, vel quod voluptua ne.
+    Feel free to connect with me. I'm open to discussions about technology, security, or potential collaborations.
   </p>
   <Substats
     stats={[
       {
         platform: 'GitHub',
         icon: 'github',
-        link: 'https://github.com/cworld1',
+        link: 'https://github.com/farrosfr',
         text: 'followers',
-        api: 'github/cworld1'
+        api: 'github/farrosfr' // GitHub biasanya paling stabil
       },
       {
         platform: 'Telegram',
         icon: 'telegram',
         color: '#2ca5e0',
-        link: 'https://t.me/cworld0_cn',
+        link: 'https://t.me/farrosfr',
+        text: '',
+        // api: 'telegram/farrosfr' <--- Matikan. Kecuali ini Public Channel, API Telegram gak bisa baca user biasa.
+      },
+      {
+        platform: 'Instagram',
+        icon: 'instagram',
+        color: '#C13584',
+        link: 'https://instagram.com/farrosfr',
+        text: '',
+        // api: 'instagram/farrosfr' <--- Matikan. Instagram 99% pasti gagal kalau public scraping.
+      },
+      {
+        platform: 'YouTube',
+        icon: 'youtube',
+        color: '#ff0000',
+        link: 'https://youtube.com/@farrosfr',
         text: 'subscribers',
-        api: 'telegram/cworld0_cn'
+        // COBA INI: Hapus '/channel/'. Formatnya 'youtube/ID'. 
+        // Kalau masih error (loading terus), kasih // di depan baris api.
+        api: 'youtube/UC-Y7c-SmqdytINss_ZjJkNQ' 
       },
       {
-        platform: 'Weibo',
-        icon: 'weibo',
-        color: '#e71f19',
-        link: 'https://weibo.com/cworld0',
-        text: 'followers',
-        api: 'weibo/5501674056'
+        platform: 'Discord',
+        icon: 'discord',
+        color: '#5865F2',
+        link: 'https://discord.com/users/farrosfr', 
+        text: '',
+        // Discord User gak ada API followers, jadi matikan api-nya.
       },
       {
-        platform: 'Steam',
-        icon: 'steam',
-        color: '#50769d',
-        link: 'https://steamcommunity.com/id/cworld',
-        text: 'games',
-        api: 'steamgames/76561199021278120'
+        platform: 'X (Twitter)',
+        icon: 'x', 
+        link: 'https://x.com/farrosfr',
+        text: '',
+        // API Twitter berbayar/rusak, biarkan mati.
+      },
+      {
+        platform: 'Reddit',
+        icon: 'reddit',
+        color: '#ff4500',
+        link: 'https://www.reddit.com/user/farrosfr',
+        text: 'karma',
+        api: 'reddit/farrosfr' // Reddit biasanya aman (hoki-hokian)
+      },
+      {
+        platform: 'TikTok',
+        icon: 'tiktok',
+        link: 'https://tiktok.com/@farrosfr',
+        text: '',
+        // api: 'tiktok/farrosfr' <--- Matikan. TikTok agresif banget ngeblok bot.
+      },
+      {
+        platform: 'RSS',
+        icon: 'rss',
+        color: '#ea580c',
+        link: '/rss.xml',
+        text: '',
+      },
+      {
+        platform: 'Email',
+        icon: 'email',
+        color: '#0077cc',
+        link: 'mailto:hello@farrosfr.com',
+        text: '',
       }
     ]}
   />
-
-  {/* gossips */}
-  <h2 id='gossips'>Gossips</h2>
-  <Collapse title='Lorem ipsum'>
-    Lorem ipsum dolor sit amet, vidit suscipit at mei. Quem denique mea id. Usu ei regione indoctum
-    dissentiunt, cu meliore fuisset mei, vel quod voluptua ne. Ex dicat impedit mel, at eum oratio
-    possit voluptatum.
-  </Collapse>
 
   {/* about-blog */}
   <h2 id='about-blog'>About Blog</h2>
@@ -211,49 +260,27 @@ const headings = [
   <Timeline
     events={[
       {
-        date: '2024-04-29',
+        date: '2025-11-30',
         content:
-          'Website refactored using <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://github.com/srleom/astro-theme-resume" target="_blank">Astro Theme Resume</a>'
+          'Rebuilt and launched the platform using <a href="https://astro.build/" target="_blank">Astro</a> and <a href="https://github.com/cworld1/astro-theme-pure" target="_blank">Astro Theme Pure</a>.'
       },
       {
-        date: '2024-07-26',
+        date: '2025-11-30', // Geser sehari atau samain gpp, tapi isinya beda
         content:
-          'Website abstracted as a theme and published on <a href="https://github.com/cworld1/astro-theme-pure"target="_blank">Github</a>'
+          'Source code published on <a href="https://github.com/farrosfr/farrosfr.github.io" target="_blank">Github</a> as an open portfolio.'
       },
       {
-        date: '2024-07-27',
-        content: 'Began writing website docs'
+        date: 'Current',
+        content: 'Active as a personal portfolio, CTF write-ups repository, and security research journal.'
       }
     ]}
   />
-  <p>
-    The smooth operation and personalized customization of website also rely on the resources and
-    technical support provided by the following excellent projects/service providers:
+  <p class="mt-4">
+    Powered by:
   </p>
   <ul>
-    <li>Domain: <a href='#' target='_blank'>Vercel</a></li>
-    <li>
-      Framework & Theme: <a href='https://astro.build/' target='_blank'>Astro</a> + <a
-        href='https://github.com/cworld1/astro-theme-pure'
-        target='_blank'>Astro Theme Pure</a
-      >
-    </li>
-    <li>
-      Site hosting: <a href='https://vercel.com/' target='_blank'>Vercel</a>
-    </li>
-    <li>
-      CI/CD: <a href='https://vercel.com/workflow' target='_blank'>Vercel Workflow</a>
-    </li>
-    <!-- <li>Resources speedup: <a href='https://cdn.cbd.int/' target='_blank'>CBD CDN</a></li> -->
-    <li>Comment system: <a href='https://waline.js.org' target='_blank'>Waline</a></li>
-    <li>
-      Visits: <a href='https://supabase.com/' target='_blank'>Supabase</a> +
-      <a href='https://waline.js.org/' target='_blank'>Waline</a>
-    </li>
-    <li>
-      Other statistics: <a href='https://github.com/spencerwooo/substats' target='_blank'
-        >Substats</a
-      >
-    </li>
+    <li>Framework: <a href='https://astro.build/' target='_blank'>Astro</a></li>
+    <li>CI/CD: <a href='https://github.com/features/actions' target='_blank'>GitHub Actions</a></li>
+    <li>Hosting: <a href='https://pages.github.com/' target='_blank'>GitHub Pages</a></li>
   </ul>
 </PageLayout>
