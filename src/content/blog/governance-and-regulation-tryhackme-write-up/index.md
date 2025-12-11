@@ -3,7 +3,7 @@ title: 'Governance & Regulation | TryHackMe Write-Up'
 publishDate: '2025-12-11'
 description: Explore policies and frameworks vital for regulating cyber security in an organisation.
 tags: [tryhackme, security, write-up]
-heroImage: {src: './image.png', alt: 'credit: TryHackMe'}
+heroImage: {src: './image-.png', alt: 'credit: TryHackMe'}
 language: 'en'
 ---
 Here i want to share about my write-up for the room [Governance & Regulation](https://tryhackme.com/room/cybergovernanceregulation). Explore policies and frameworks vital for regulating cyber security in an organisation. I wrote this in 2025 and hope it is useful for learning about cybersecurity.
