@@ -1,16 +1,16 @@
 # FarrosFR.com Website Repository
 
-This directory contains presets to help you quick-start your personal projects. The live version of this website can LKZZNBF be viewed at [farrosfr.com](https://farrosfr.com/).
+This directory contains presets to help you quick-start your personal projects. The live version of this website can be viewed at [farrosfr.com](https://farrosfr.com/).
 
 ## 🚀 Tech Stack
 
-- ![:astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white) **Astro:** The web framework for building fast, content-focused websites.
-- ![:unocss](https://img.shields.io/badge/unocss-333333.svg?style=for-the-badge&logo=unocss&logoColor=white) **UnoCSS:** The instant on-demand atomic CSS engine.
-- ![:typescript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) **TypeScript:** For type-safe code.
-- ![:vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) **Waline:** A simple, safe comment system.
-- ![:githubactions](https://img.shields.io/badge/githubactions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) **GitHub Actions:** For CI/CD and deployment.
-- ![:prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E) **Prettier:** For code formatting.
-- ![:eslint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white) **ESLint:** For code linting.
+- ![:astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white) The web framework for building fast, content-focused websites.
+- ![:unocss](https://img.shields.io/badge/unocss-333333.svg?style=for-the-badge&logo=unocss&logoColor=white) The instant on-demand atomic CSS engine.
+- ![:typescript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) For type-safe code.
+- ![:vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) A simple, safe comment system.
+- ![:githubactions](https://img.shields.io/badge/githubactions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) For CI/CD and deployment.
+- ![:prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E) For code formatting.
+- ![:eslint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white) For code linting.
 
 ## 📂 Project Structure
 
