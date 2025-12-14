@@ -4,6 +4,8 @@ This directory contains presets to help you quick-start your personal projects. 
 
 ## 🚀 Tech Stack
 
+This website is based on the Astro Pure theme: [astro-theme-pure](https://github.com/cworld1/astro-theme-pure)
+
 - ![:astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white) The web framework for building fast, content-focused websites.
 - ![:unocss](https://img.shields.io/badge/unocss-333333.svg?style=for-the-badge&logo=unocss&logoColor=white) The instant on-demand atomic CSS engine.
 - ![:typescript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) For type-safe code.
