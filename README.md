@@ -1,103 +1,61 @@
-# Astro Theme Pure
+# FarrosFR.com Website Repository
 
-English | [简体中文](./README-zh-CN.md)
+This directory contains presets to help you quick-start your personal projects. The live version of this website can LKZZNBF be viewed at [farrosfr.com](https://farrosfr.com/).
 
-A simple, fast and powerful blog & document theme built by Astro.
+## 🚀 Tech Stack
 
-[![GitHub deployments](https://img.shields.io/github/deployments/cworld1/astro-theme-pure/production?style=flat&logo=vercel&label=vercel)](https://astro-pure.js.org/)
-[![NPM Version](https://img.shields.io/npm/v/astro-pure?logo=npm&style=flat)](https://www.npmjs.com/package/astro-pure)
-[![GitHub Release](https://img.shields.io/github/v/release/cworld1/astro-theme-pure?include_prereleases&style=flat&label=template)](https://github.com/cworld1/astro-theme-pure/releases)
-[![GitHub License](https://img.shields.io/github/license/cworld1/astro-theme-pure?style=flat)](https://github.com/cworld1/astro-theme-pure/blob/main/LICENSE)
+- ![:astro](https://img.shields.io/badge/astro-%232C2052.svg?style=for-the-badge&logo=astro&logoColor=white) **Astro:** The web framework for building fast, content-focused websites.
+- ![:unocss](https://img.shields.io/badge/unocss-333333.svg?style=for-the-badge&logo=unocss&logoColor=white) **UnoCSS:** The instant on-demand atomic CSS engine.
+- ![:typescript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) **TypeScript:** For type-safe code.
+- ![:vercel](https://img.shields.io/badge/vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white) **Waline:** A simple, safe comment system.
+- ![:githubactions](https://img.shields.io/badge/githubactions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) **GitHub Actions:** For CI/CD and deployment.
+- ![:prettier](https://img.shields.io/badge/prettier-1A2C34?style=for-the-badge&logo=prettier&logoColor=F7BA3E) **Prettier:** For code formatting.
+- ![:eslint](https://img.shields.io/badge/eslint-3A33D1?style=for-the-badge&logo=eslint&logoColor=white) **ESLint:** For code linting.
 
-![image](./.github/assets/header.webp)
-![image](./.github/assets/body.webp)
+## 📂 Project Structure
 
-> [!NOTE]
-> Known issues: 1. Header & customize options is still under development (template exposed still). 2. Theme template v4.0.5^ UnoCSS preset changed to PresetMini. If there's any problem, please report as issue.
+The project is organized as follows:
 
-## Introduction
+- **`preset/`**: Contains resource presets like icons and experimental components.
+  - `icons/`: Alternative icons for `src/assets/tools`.
+  - `components/`: Experimental component templates.
+- **`public/`**: Contains static assets like fonts, images, and other files.
+- **`src/`**: Contains the source code of the website.
+  - `assets/`: Static assets used within Astro components.
+  - `components/`: Reusable Astro components.
+  - `content/`: Markdown files for blog posts and other content.
+  - `layouts/`: Base layouts for pages.
+  - `pages/`: Website pages and API endpoints.
 
-Checkout [Demo Site →](https://astro-pure.js.org/)
+## 🧩 Components
 
-### :fire: Features
+Here are some of the main components used in this project:
 
-- [x] :rocket: Fast & high performance
-- [x] :star: Simple & clean design
-- [x] :iphone: Responsive design
-- [x] :mag: Full-site search built with [pagefind](https://pagefind.app/)
-- [x] :world_map: Sitemap & RSS feed
-- [x] :spider_web: SEO-friendly
-- [x] :book: TOC (table of contents)
-- [x] :framed_picture: Dynamic open graph generation for posts
-- [x] :framed_picture: Mediumzoom lightbox for images
+- `BaseHead.astro`: Manages the `<head>` section, including metadata and styles.
+- **`about/`**:
+  - `Substats.astro`: Component for displaying substats.
+  - `ToolSection.astro`: Displays a section of tools.
+- **`home/`**:
+  - `ProjectCard.astro`: Card for displaying project information.
+  - `Section.astro`: A general-purpose section component.
+  - `SkillLayout.astro`: Layout for displaying skills.
+- **`projects/`**:
+  - `ProjectSection.astro`: A section for projects.
+  - `Sponsors.astro`: Component to display sponsors.
+- **`waline/`**:
+  - `Comment.astro`: Integrates the Waline comment system.
+  - `Pageview.astro`: Displays page views.
 
-### :package: Components
+## 🗺️ Routes
 
-Theme includes a lot of components, which can not only be used in the theme, but also in other astro projects.
+The main pages and routes are defined in `src/pages`:
 
-> For other astro projects, UnoCSS is required. See [Package README](https://github.com/cworld1/astro-theme-pure/blob/main/packages/pure/README.md#use-with-common-astro-project) for more details.
-
-- Basic components: `Aside`, `Tabs`, `Timeline`, `Steps`, `Spoiler`...
-- Advanced components: `GithubCard`, `LinkPreview`, `Quote`, `QRCode`...
-
-### :white_check_mark: Lighthouse score
-
-[![lighthouse-score](./.github/assets/lighthouse-score.png)](https://pagespeed.web.dev/analysis/https-cworld-top/o229zrt5o4?form_factor=mobile&hl=en)
-
-## Documentation
-
-[Docs](https://astro-pure.js.org/docs) | [Showcase](https://github.com/cworld1/astro-theme-pure/issues/10)
-
-## Package
-
-See [astro-theme-pure](https://www.npmjs.com/package/astro-pure) on npm.
-
-## Local development
-
-Environment requirements:
-
-- [Nodejs](https://nodejs.org/): 18.0.0+
-
-Clone the repository:
-
-```shell
-git clone https://github.com/cworld1/astro-theme-pure.git
-cd astro-theme-pure
-```
-
-Useful commands:
-
-```shell
-# install dependencies
-bun install
-
-# start the dev server
-bun dev
-
-# build the project
-bun run build
-
-# preview (after the build)
-bun preview
-
-# create a new post
-bun new
-```
-
-## Contributions
-
-To spend more time coding and less time fiddling with whitespace, this project uses code conventions and styles to encourage consistency. Code with a consistent style is easier (and less error-prone!) to review, maintain, and understand.
-
-## Thanks
-
-- [Astro Cactus](https://github.com/chrismwilliams/astro-theme-cactus)
-- [Astro Resume](https://github.com/srleom/astro-theme-resume)
-- [Starlight](https://github.com/withastro/starlight)
-
-Other third party references are on [Docs#Contributions](https://astro-pure.js.org/docs/advanced/thanks). Appreciate for all open source libraries.
-
-## License
-
-This project is licensed under the Apache 2.0 License.
-
-[![Star History Chart](https://api.star-history.com/svg?repos=cworld1/astro-theme-pure&type=Date)](https://star-history.com/#cworld1/astro-theme-pure&Date)
+- `/`: The home page.
+- `/about`: The about page.
+- `/archives`: The archives page.
+- `/blog/[...id]`: Individual blog posts.
+- `/projects`: The projects page.
+- `/search`: The search page.
+- `/tags/[tag]`: Pages for specific tags.
+- `/rss.xml`: The RSS feed.
+- `/api/`: API routes.
