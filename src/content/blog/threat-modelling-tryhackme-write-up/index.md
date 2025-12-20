@@ -1,5 +1,5 @@
 ---
-title: 'Threat Modelling | THM Write-Up'
+title: 'Threat Modelling | TryHackMe Write-Up'
 publishDate: '2025-12-17'
 description: Building cyber resiliency and emulation capabilities through threat modelling.
 tags: [tryhackme, write-up]
