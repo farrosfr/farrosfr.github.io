@@ -98,12 +98,20 @@ const socialImageURL = new URL(ogImage ? ogImage : config.socialCard, Astro.url)
 {/* Google Analytics */}
 {import.meta.env.PROD && (
   <>
-    <script type="text/partytown" async src="https://www.googletagmanager.com/gtag/js?id=G-CYGXKE705K"></script>
-    <script type="text/partytown">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CYGXKE705K"></script>
+    <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-CYGXKE705K');
+
+      document.addEventListener('astro:after-swap', () => {
+        if (typeof gtag === 'function') {
+          gtag('config', 'G-CYGXKE705K', {
+            'page_path': window.location.pathname,
+          });
+        }
+      });
     </script>
   </>
 )}

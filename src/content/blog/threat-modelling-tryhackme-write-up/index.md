@@ -6,7 +6,7 @@ tags: [tryhackme, write-up]
 heroImage: {src: './image.png', alt: 'credit: TryHackMe'}
 language: 'en'
 ---
-Here i want to share about my write-up for the room [Threat Modelling](https://tryhackme.com/room/capabasics) (Premium Room), building cyber resiliency and emulation capabilities through threat modelling.. I wrote this in 2025 and hope it is useful for learning about cybersecurity.
+Here i want to share about my write-up for the room [Threat Modelling](https://tryhackme.com/room/threatmodelling) (Premium Room), building cyber resiliency and emulation capabilities through threat modelling.. I wrote this in 2025 and hope it is useful for learning about cybersecurity.
 
 ## Task 1: Introduction
 
