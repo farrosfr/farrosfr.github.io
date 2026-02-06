@@ -53,7 +53,11 @@ export default defineConfig({
     // sitemap(),
     // mdx(),
     AstroPureIntegration(config),
-    partytown()
+    partytown({
+      config: {
+        forward: ['dataLayer.push', 'gtag']
+      }
+    })
     // @playform/compress have potential build issue with this template
     // (await import('@playform/compress')).default({ SVG: false, Exclude: ['index.*.js'] })
 
