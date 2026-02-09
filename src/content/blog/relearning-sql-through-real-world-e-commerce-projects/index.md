@@ -31,6 +31,8 @@ Below are several SQL and database technologies that I have worked with:
 
 ## MySQL
 
+![alt text](2.png)
+
 Well-suited for Laravel/PHP stacks, startups (mid-scale), and CRUD-heavy applications.
 
 ### MySQL Pros
@@ -54,6 +56,8 @@ Well-suited for Laravel/PHP stacks, startups (mid-scale), and CRUD-heavy applica
 ---
 
 ## PostgreSQL
+
+![alt text](3.png)
 
 Well-suited for B2B e-commerce, systems with complex queries, and hybrid OLTP + analytics workloads.
 
@@ -81,6 +85,8 @@ Well-suited for B2B e-commerce, systems with complex queries, and hybrid OLTP + 
 
 ## SQL Server
 
+![alt text](1.png)
+
 Well-suited for enterprise B2B systems, finance, ERP, internal platforms, and BI/data engineering teams.
 
 ### SQL Server Pros
@@ -106,6 +112,8 @@ Well-suited for enterprise B2B systems, finance, ERP, internal platforms, and BI
 ---
 
 ## NoSQL
+
+![alt text](4.png)
 
 Best used as a complementary technology rather than a replacement for SQL databases.
 
