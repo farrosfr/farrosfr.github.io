@@ -124,3 +124,9 @@ Best used as a complementary technology rather than a replacement for SQL databa
 - Product view caching
 - Activity logs
 - Search indexing
+
+---
+
+If you are building or scaling an e-commerce system—especially B2B—and need help with database design, SQL optimization, or data modeling based on real business workflows, feel free to reach out.
+
+You can contact me via email at **<hello@farrosfr.com>**.
