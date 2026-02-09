@@ -2,7 +2,7 @@
 title: 'SQLMap: The Basics | TryHackMe Write-Up'
 publishDate: '2025-09-16'
 description: Learn about SQL injection and exploit this vulnerability through the SQLMap tool.
-tags: [tryhackme, SQLmap, write-up]
+tags: [tryhackme, sql, write-up]
 heroImage: {src: './image.png', alt: 'TryHackMe'}
 language: 'en'
 ---

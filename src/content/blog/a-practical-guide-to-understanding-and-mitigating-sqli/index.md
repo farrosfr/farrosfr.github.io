@@ -3,7 +3,7 @@ title: A Practical Guide to Understanding and Mitigating SQLi
 publishDate: '2025-01-02T02:48:26.443Z'
 description: >-
   A Practical Guide to Understanding and Mitigating SQL Injection Risks.
-tags: [sqli, php]
+tags: [sql, php]
 heroImage: { src: './image.png', color: '#223655' }
 language: 'en'
 ---

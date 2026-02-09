@@ -2,7 +2,7 @@
 title: Mitigating Admin Login Bypass in Web Security
 publishDate: '2024-07-02T08:06:27.420Z'
 description: 'Understanding and Mitigating Admin Login Bypass in Web Security.'
-tags: [sqli]
+tags: [sql]
 heroImage: {src: './image.png',color: '#d1edfe'}
 language: 'en'
 ---

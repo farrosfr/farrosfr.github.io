@@ -84,6 +84,24 @@
     ],
     "Data_Science_and_Database": [
       {
+        "name": "Intermediate SQL Server",
+        "issuer": "DataCamp",
+        "date": "Feb 2026",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/ca7b3bed05e7b9e4404553adbb830d75b3c87317"
+      },
+      {
+        "name": "Introduction to SQL Server",
+        "issuer": "DataCamp",
+        "date": "Feb 2026",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/a115bdd43fa73424e6a572e71cc3c1261ab649b0"
+      },
+      {
+        "name": "Introduction to SQL",
+        "issuer": "DataCamp",
+        "date": "Feb 2026",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/2a5b95c3d50b83f77f051cbd99e0c10400d65458"
+      },
+      {
         "name": "SQL (Basic)",
         "issuer": "HackerRank",
         "date": "Jan 2022",

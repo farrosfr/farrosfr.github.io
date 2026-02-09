@@ -3,7 +3,7 @@ title: Prevent SQLi with Validators and Prepared Statements
 publishDate: '2024-09-12T08:39:41.988Z'
 description: >-
   How to Prevent SQL Injection Attacks with Validators and Prepared Statements in Backend Code.
-tags: [sqli, js]
+tags: [sql, js]
 heroImage: {src: './image.png',color: '#ffffff'}
 language: 'en'
 ---

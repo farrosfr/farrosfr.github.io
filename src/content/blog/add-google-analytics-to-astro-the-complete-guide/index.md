@@ -3,7 +3,7 @@ title: "Add Google Analytics to Astro: The Complete Guide"
 publishDate: '2025-08-18'
 description: >-
    A complete guide to integrating Google Analytics in Astro using best practices: layouts, environment variables, and handling View Transitions for good tracking.
-tags: [astro, Wwbdev]
+tags: [astro, webdev]
 heroImage: { src: './image copy.png', color: '#f9ab00' }
 language: 'en'
 ---
