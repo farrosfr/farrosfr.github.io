@@ -270,7 +270,9 @@ if ($SERVER['REQUESTMETHOD'] === 'POST') {
 
 ### 2. Instructions to Simulate the Web Application
 
-### 1. Create a Database and Table: Run this SQL to create a database and a table for testing
+### 1. Create a Database and Table
+
+Run this SQL to create a database and a table for testing
 
 ``` sql
 CREATE DATABASE testdb;  
@@ -285,19 +287,25 @@ CREATE TABLE users (
 INSERT INTO users (username, password) VALUES ('testuser', 'testpassword');
 ```
 
-### 2. Replace Database Credentials: Update the mysqli connection code in the PHP script
+### 2. Replace Database Credentials
+
+Update the mysqli connection code in the PHP script
 
 ``` sql
 $connection = new mysqli('localhost', 'root', 'your password', 'testdb');
 ```
 
-### 3. Run a Local PHP Server: Save the file as login.php and start a PHP server in the directory where it is saved
+### 3. Run a Local PHP Server
+
+Save the file as login.php and start a PHP server in the directory where it is saved
 
 ``` bash
 php -S localhost:8000
 ```
 
-### 4. Access the Application in a Browser: Open a browser and go to [http://localhost:8000/login.php.](http://localhost:8000/login.php.)
+### 4. Access the Application in a Browser
+
+Open a browser and go to [http://localhost:8000/login.php.](http://localhost:8000/login.php.)
 
 ### 5. Test the Login
 
