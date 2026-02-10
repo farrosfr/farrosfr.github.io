@@ -4,7 +4,7 @@ publishDate: '2026-02-10'
 description: >-
   Real-world lessons from deploying a Laravel e-commerce app to VPS—covering pitfalls, trade-offs, and practical decisions beyond local development.
 tags: [webdev, php, e-commerce, laravel]
-heroImage: {src: './hero.png'}
+heroImage: {src: './hero.png', alt: 'AI generated'}
 ---
 This document outlines the development process for a single-vendor e-commerce website using a Laravel backend, MySQL database, and Vue.js for the frontend. Initially, three potential tech stacks were considered: Medusa.js, Saleor, and Laravel + Vue.js 3.
 
@@ -99,7 +99,7 @@ it’s often faster to:
 - align PHP extensions with production from day one,
 - and avoid local-only optimizations that won’t ship.
 
-Local dev is still important — but only when it mirrors production closely.
+Local dev is still important, but only when it mirrors production closely.
 
 ## Why I Finally Chose Laravel Over Medusa & Saleor
 
