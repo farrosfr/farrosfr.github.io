@@ -1,6 +1,6 @@
 ---
 title: 'Deploying Laravel E-commerce: Lessons from the Field'
-publishDate: '2026-02-10'
+publishDate: '2026-02-11'
 description: >-
   Real-world lessons from deploying a Laravel e-commerce app to VPS—covering pitfalls, trade-offs, and practical decisions beyond local development.
 tags: [webdev, php, e-commerce, laravel]
