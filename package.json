@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.5",
-    "@astrojs/partytown": "^2.1.4",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/vercel": "^9.0.1",
     "@waline/client": "^3.8.0",

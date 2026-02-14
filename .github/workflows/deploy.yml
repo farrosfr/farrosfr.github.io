@@ -17,8 +17,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4

@@ -12,7 +12,6 @@ const { articleDate, description, ogImage, title } = Astro.props
 const siteTitle = `${title} ${config.titleDelimiter} ${config.title}`
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 const socialImageURL = new URL(ogImage ? ogImage : config.socialCard, Astro.url).href
-const gaId = import.meta.env.PUBLIC_GA_ID
 ---
 
 <meta charset='utf-8' />
@@ -96,26 +95,5 @@ const gaId = import.meta.env.PUBLIC_GA_ID
     </script>
   )
 }
-{/* Google Analytics */}
-{
-  gaId && import.meta.env.PROD && (
-    <>
-      <script
-        type='text/partytown'
-        async
-        src={`https://www.googletagmanager.com/gtag/js?id=${
-          gaId
-        }`}
-      />
-      <script type='text/partytown'>
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gaId}', { 'send_page_view': false });
-        `}
-      </script>
-    </>
-  )
-}
+
 
