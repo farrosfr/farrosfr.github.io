@@ -3,7 +3,7 @@ title: "Pro Google Analytics in Astro with Partytown"
 publishDate: '2026-02-13'
 description: >-
   A practical integrating Google Analytics in Astro with Partytown. This guide covers performance considerations, View Transitions, and deployment tips.
-tags: [astro, webdev, performance, partytown]
+tags: [astro, webdev, js, seo]
 heroImage: { src: './image.webp', color: '#659EB9' }
 language: 'en'
 ---
@@ -220,11 +220,4 @@ jobs:
 
 By coordinating these five files, you can build a more performance-aware Google Analytics setup in Astro. While this approach may not be necessary for every project, it can offer better control over tracking behavior, especially in sites that rely on View Transitions and client-side navigation.
 
----
-
 If this guide helped you think differently about analytics and performance in Astro, feel free to share it with other builders who care about clean implementations.
-
-I regularly write about Astro, performance optimization, and practical web engineering experiments.  
-You can explore more articles at 👉 <https://farrosfr.com>
-
-If you have your own approach to handling analytics (or decided to skip it entirely), I’d genuinely love to hear your perspective.
