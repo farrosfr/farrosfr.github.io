@@ -61,14 +61,14 @@ export const theme: ThemeUserConfig = {
     year: `© ${new Date().getFullYear()}`,
     // year: `© 2019 - ${new Date().getFullYear()}`,
     links: [
-      // Registration link
+      //Registration link
       
-      // Privacy Policy link
-      // {
-      //   title: 'Site Policy',
-      //   link: '/terms/list',
-      //   pos: 2 // position set to 2 will be appended to copyright line
-      // }
+      //Privacy Policy link
+      {
+        title: 'Site Policy',
+        link: '/terms/list',
+        pos: 2 // position set to 2 will be appended to copyright line
+      }
     ],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
     credits: true,

@@ -105,11 +105,12 @@ if (!images[imagePath])
 
     <div id='content' class='animate flex flex-col gap-y-10 md:w-4/5 lg:w-5/6'>
       <Section title='About'>
-        <p class='text-muted-foreground'>Web Builder / Security Enthusiast</p>
+        <p class='text-muted-foreground'>Full-Stack Web Engineer & Red Team Practitioner</p>
         <p class='text-muted-foreground'>
-          A web builder specializing in high-performance websites using meta-frameworks like Astro.
-          In cybersecurity, focused on offensive security and common vulnerabilities.
-          This blog shares various findings and insights.
+          Building high-performance, scalable web systems across the stack.
+          On the security side, focused on offensive techniques, real-world attack surfaces,
+          and breaking systems to understand how to build them better.
+          This blog documents architecture decisions, security insights, and practical experiments.
         </p>
         <Button title='More about me' class='w-fit self-end' href='/about' variant='ahead' />
       </Section>
@@ -129,33 +130,56 @@ if (!images[imagePath])
       }
 
       {
-        /* <Section title='Experience'>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      >
-        <ul class='ms-4 list-disc text-muted-foreground'>
-          <li>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore debitis recusandae, ut
-            molestiae laboriosam pariatur!
+        <Section title='Experience'>
+        <Card
+          heading='System Architect'
+          subheading='Solar Nusantara'
+          date='Jan 2026 - Present'
+        >
+          <ul class='ms-4 list-disc text-muted-foreground space-y-2'>
+            <li>
+              Leading web architecture, infrastructure, and platform scalability across multiple websites.
+            </li>
+            <li>
+              Designing high-performance marketing sites using Astro with strong SEO and Core Web Vitals optimization.
+            </li>
+          </ul>
+        </Card>
 
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, pariatur!</li>
-          </li>
-        </ul>
-      </Card>
-      <Card
-        heading='Lorem Ipsum'
-        subheading='Sit amet consectetur'
-        date='Dec 2022 - Nov 2023'
-        imagePath='/src/assets/about-astro.png'
-        altText='Lorem, ipsum dolor sit'
-        imageClass='h-12 w-auto md:-start-16'
-      />
-    </Section> */
+        <Card
+          heading='IT Engineer'
+          subheading='Solar Nusantara'
+          date='Sep 2023 - Dec 2025'
+        >
+          <ul class='ms-4 list-disc text-muted-foreground space-y-2'>
+            <li>
+              Managed servers, email systems, and internal infrastructure (Linux / VPS environments).
+            </li>
+            <li>
+              Maintained and optimized company websites and digital platforms.
+            </li>
+            <li>
+              Handled deployment workflows, DNS configuration, and production troubleshooting.
+            </li>
+          </ul>
+        </Card>
+
+        <Card
+          heading='Cybersecurity Writer'
+          subheading='Medium (Self-employed)'
+          date='Sep 2023 - Present'
+        >
+          <ul class='ms-4 list-disc text-muted-foreground space-y-2'>
+            <li>
+              Publishing hands-on write-ups on web vulnerabilities, CVE analysis, and red team methodology.
+            </li>
+            <li>
+              Exploring offensive security techniques and documenting practical findings.
+            </li>
+          </ul>
+        </Card>
+      </Section>
+      
       }
       <Section title='Education'>
         <Card
