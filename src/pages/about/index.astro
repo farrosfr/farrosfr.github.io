@@ -3,7 +3,7 @@ import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
 import PageLayout from '@/layouts/CommonPage.astro'
 import Substats from '@/components/about/Substats.astro'
 import ToolSection from '@/components/about/ToolSection.astro'
-import certificates from './cert.json'
+import certificates from '../../data/cert.json'
 
 const certCategories = Object.keys(certificates.portfolio_certificates).map(category => ({
   depth: 3,
