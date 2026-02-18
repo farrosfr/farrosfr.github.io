@@ -3,7 +3,7 @@ title: Common Attacks | TryHackMe Write-Up
 publishDate: '2025-09-14'
 description: >-
   With practical exercises see how common attacks occur, and improve your cyber hygiene to stay safer online.
-tags: [tryhackme, common-attacks, write-up]
+tags: [tryhackme, write-up]
 heroImage: {src: './image.png', alt: 'TryHackMe'}
 language: 'en'
 ---
