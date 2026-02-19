@@ -378,7 +378,9 @@ Two approaches:
 ### Approach A: Store Both USD & IDR (Simple)
 
 ✔ Fast
+
 ✔ No conversion needed
+
 ❌ Must manually update exchange rates
 
 ### Approach B: Store USD Only + Exchange Rate Table
@@ -435,12 +437,12 @@ Add:
 
 This MySQL design provides:
 
-✔ Structured hierarchical categories
-✔ Brand management
-✔ Multi-currency pricing
-✔ Tier pricing for bulk
-✔ Clean relational design
-✔ Scalable B2B foundation
+* Structured hierarchical categories
+* Brand management
+* Multi-currency pricing
+* Tier pricing for bulk
+* Clean relational design
+* Scalable B2B foundation
 
 It is optimized for:
 
