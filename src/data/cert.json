@@ -84,6 +84,12 @@
     ],
     "Data_Science_and_Database": [
       {
+        "name": "Introduction to Databases in Python",
+        "issuer": "DataCamp",
+        "date": "Feb 2026",
+        "link": "https://www.datacamp.com/completed/statement-of-accomplishment/course/943dd462b43ab92995bd20a44c7395e905fc9fc6"
+      },
+      {
         "name": "Intermediate SQL Server",
         "issuer": "DataCamp",
         "date": "Feb 2026",
