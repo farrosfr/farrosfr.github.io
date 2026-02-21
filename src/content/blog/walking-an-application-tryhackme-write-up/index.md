@@ -37,15 +37,15 @@ The page source contains the raw HTML, CSS, and JavaScript returned by the serve
 
 ![alt text](image.png)
 
-pertama kita buka dulu webnya
+First, we open the website.
 
 ![alt text](image-1.png)
 
-kita mendapat path /new-home-beta di html nya
+From the HTML source, we discover a path: `/new-home-beta`.
 
 ![alt text](image-2.png)
 
-dan kita mendapat flag pertama dari html komen
+Inside the HTML comments, we find the first flag.
 
 **What is the flag from the HTML comment?**
 
@@ -53,11 +53,11 @@ dan kita mendapat flag pertama dari html komen
 
 ![alt text](image-3.png)
 
-lalu kita menemukan path rahasia lagi /secret-page
+Next, we discover another hidden path: `/secret-page`.
 
 ![alt text](image-4.png)
 
-dan kita mendapat flag kedua
+Visiting that page reveals the second flag.
 
 **What is the flag from the secret link?**
 
@@ -65,11 +65,12 @@ dan kita mendapat flag kedua
 
 ![alt text](image-5.png)
 
-kemudian di bagian bawah html kita menemukan sebuah path dari beberapa file yaitu /assets maka kita bisa coba akses path tersebut
+At the bottom of the HTML source, we notice a reference to a directory path: `/assets`.  
+We then try accessing that directory directly.
 
 ![alt text](image-6.png)
 
-dan dari path tersebut kita mendapat flag ketiga
+From the directory listing, we obtain the third flag.
 
 **What is the directory listing flag?**
 
@@ -77,15 +78,16 @@ dan dari path tersebut kita mendapat flag ketiga
 
 ![alt text](image-7.png)
 
-di bagian paling bawah ini kita bisa melihat ada url dari web framework yang bisa kita akses <https://static-labs.tryhackme.cloud/sites/thm-web-framework>
+At the very bottom, we also see a URL pointing to the web framework:  
+<https://static-labs.tryhackme.cloud/sites/thm-web-framework>
 
 ![alt text](image-8.png)
 
-di bagian changelog kita menemukan path baru yaitu /tmp.zip yang bisa kita coba telusuri
+Inside the changelog section, we discover a new path: `/tmp.zip`, which we can further investigate.
 
 ![alt text](image-9.png)
 
-dan kita mendapat flag keempat dari file tersebut
+From that file, we obtain the fourth flag.
 
 **What is the framework flag?**
 
