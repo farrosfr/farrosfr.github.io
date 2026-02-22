@@ -2,7 +2,7 @@
 title: Walking An Application | TryHackMe Write-Up
 publishDate: '2026-02-22'
 description: Hands-on walkthrough of Walking An Application on TryHackMe, exploring source code, Inspector, Debugger, and Network tools to uncover hidden flags.
-tags: [tryhackme, write-up, seurity, ctf, js]
+tags: [tryhackme, write-up, security, ctf, js]
 heroImage: {src: './a.webp'}
 ---
 
