@@ -1,7 +1,7 @@
 ---
 title: 'Metasploit: Introduction | TryHackMe Write-Up'
 publishDate: '2025-04-30T15:30:00.129Z'
-description: 'Metasploit: Introduction | TryHackMe | Write-Up by FarrosFR.'
+description: 'Metasploit: Introduction | TryHackMe | Write-Up by Farros.'
 tags: [metasploit, tryhackme, write-up]
 heroImage: {src: './image.png', color: '#e6e6e6'}
 language: 'en'

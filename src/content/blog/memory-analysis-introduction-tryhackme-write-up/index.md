@@ -1,7 +1,7 @@
 ---
 title: Memory Analysis Introduction | TryHackMe Write-Up
 publishDate: '2025-05-30T07:20:37.754Z'
-description: 'Memory Analysis Introduction | TryHackMe Write-Up | FarrosFR.'
+description: 'Memory Analysis Introduction | TryHackMe Write-Up | Farros.'
 tags: [forensics, tryhackme, write-up, dfir]
 heroImage: {src: './image.png', color: '#e6e6e6'}
 language: 'en'

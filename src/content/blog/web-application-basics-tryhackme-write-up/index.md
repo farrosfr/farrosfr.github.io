@@ -2,7 +2,7 @@
 title: Web Application Basics | TryHackMe Write-Up
 publishDate: '2025-03-22T00:39:10.588Z'
 description: >-
-  Web Application Basics | TryHackMe | Write-Up by FarrosFR.
+  Web Application Basics | TryHackMe | Write-Up by Farros.
 tags: [tryhackme, write-up]
 heroImage: {src: './image.png',color: '#371360'}
 language: 'en'

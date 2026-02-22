@@ -1,7 +1,7 @@
 ---
 title: 'Jr Security Analyst Intro | TryHackMe Write-Up'
 publishDate: '2025-05-16T19:47:49.883Z'
-description: 'Jr Security Analyst Intro | TryHackMe | Write-Up by FarrosFR.'
+description: 'Jr Security Analyst Intro | TryHackMe | Write-Up by Farros.'
 tags: [soc, tryhackme, write-up]
 heroImage: {src: './image.png',color: '#05c7d5'}
 language: 'en'

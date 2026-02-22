@@ -2,7 +2,7 @@
 title: 'Simply Transform Negative Thoughts into Hundreds of Push-ups'
 publishDate: '2025-04-30T03:01:34.768Z'
 description: >-
-  How to Simply Transform Your Negative Thoughts into Hundreds of Push-ups | FarrosFR.
+  How to Simply Transform Your Negative Thoughts into Hundreds of Push-ups | Farros.
 tags: [discipline]
 heroImage: {src: './image.png',color: '#fffcfc'}
 language: 'en'

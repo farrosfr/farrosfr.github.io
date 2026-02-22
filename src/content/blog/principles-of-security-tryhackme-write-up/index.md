@@ -2,7 +2,7 @@
 title: Principles of Security | TryHackMe Write-Up
 publishDate: '2025-04-29T05:20:19.889Z'
 description: >-
-  Principles of Security | TryHackMe | Write-Up by FarrosFR.
+  Principles of Security | TryHackMe | Write-Up by Farros.
 tags: [tryhackme, write-up]
 heroImage: {src: './image.png', color: '#ffdc00'}
 language: 'en'

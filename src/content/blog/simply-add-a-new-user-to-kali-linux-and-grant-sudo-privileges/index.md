@@ -2,7 +2,7 @@
 title: 'Simply Add New User to Kali Linux and Grant Sudo Privileges'
 publishDate: '2025-04-17T08:38:02.822Z'
 description: >-
-  How to Simply Add a New User to Kali Linux and Grant Sudo Privileges | FarrosFR.
+  How to Simply Add a New User to Kali Linux and Grant Sudo Privileges | Farros.
 tags: []
 heroImage: {src: './image.png',color: '#acacad'}
 language: 'en'
