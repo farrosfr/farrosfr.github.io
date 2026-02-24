@@ -92,3 +92,5 @@ ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/namelist.txt -H "Host: FUZZ.
 **What is the second subdomain discovered?**
 
 > yellow
+
+Thanks for reading. See you in the next lab.
