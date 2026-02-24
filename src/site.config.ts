@@ -7,7 +7,7 @@ export const theme: ThemeUserConfig = {
   /** Will be used in index page & copyright declaration */
   author: 'Mochammad Farros Fatchur Roji',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Web Builder | Security Enthusiast',
+  description: 'Personal website of Mochammad Farros Fatchur Roji. Cyber Security Researcher, Red Team enthusiast, & Web Developer. Explore projects, write-ups, & experience.',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** The default social card image for your site which should be a path to an image in the `public/` directory. */

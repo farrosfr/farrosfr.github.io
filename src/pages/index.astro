@@ -4,8 +4,9 @@ import { Image } from 'astro:assets'
 import { Quote } from 'astro-pure/advanced'
 import { PostPreview } from 'astro-pure/components/pages'
 import { getBlogCollection, sortMDByDate } from 'astro-pure/server'
-import { Button, Card, Icon, Label } from 'astro-pure/user'
+import { Button, Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
+import InfoCard from '@/components/home/InfoCard.astro'
 import ProjectCard from '@/components/home/ProjectCard.astro'
 import Section from '@/components/home/Section.astro'
 import SkillLayout from '@/components/home/SkillLayout.astro'
@@ -68,9 +69,7 @@ if (!images[imagePath])
       />
 
       <div class='flex flex-col items-center gap-y-4'>
-        <h1 class='text-3xl font-bold'>
-          <span class='block sm:hidden'>Mochammad Farros F. R.</span>
-          <span class='hidden sm:block'>{config.author}</span>
+        <h1 class='text-3xl font-bold'>{config.author}</span>
         </h1>
         <div class='flex flex-wrap justify-center gap-x-7 gap-y-3'>
           <Label
@@ -131,7 +130,7 @@ if (!images[imagePath])
 
       {
         <Section title='Experience'>
-        <Card
+        <InfoCard
           heading='System Architect'
           subheading='Solar Nusantara'
           date='Jan 2026 - Present'
@@ -144,9 +143,9 @@ if (!images[imagePath])
               Designing high-performance marketing sites using Astro with strong SEO and Core Web Vitals optimization.
             </li>
           </ul>
-        </Card>
+        </InfoCard>
 
-        <Card
+        <InfoCard
           heading='IT Engineer'
           subheading='Solar Nusantara'
           date='Sep 2023 - Dec 2025'
@@ -162,9 +161,9 @@ if (!images[imagePath])
               Handled deployment workflows, DNS configuration, and production troubleshooting.
             </li>
           </ul>
-        </Card>
+        </InfoCard>
 
-        <Card
+        <InfoCard
           heading='Cybersecurity Writer'
           subheading='Medium (Self-employed)'
           date='Sep 2023 - Present'
@@ -177,12 +176,12 @@ if (!images[imagePath])
               Exploring offensive security techniques and documenting practical findings.
             </li>
           </ul>
-        </Card>
+        </InfoCard>
       </Section>
       
       }
       <Section title='Education'>
-        <Card
+        <InfoCard
           heading="Statistics"
           subheading="Sepuluh Nopember Institute of Technology"
           date="Aug 2015 - Sep 2019"
@@ -192,7 +191,7 @@ if (!images[imagePath])
               Published thesis: <a href="https://doi.org/10.12962/j27213862.v2i2.6824" target="_blank"><em>"Topic Discovery on Abstract Documents of Research Journals from ScienceDirect Using Association Rule"</em></a>.
             </li>
           </ul>
-        </Card>      
+        </InfoCard>      
       </Section>
 
       <Section title='Website List'>
@@ -237,7 +236,7 @@ if (!images[imagePath])
       </Section>
 
       <Section title='Certifications'>
-        <Card
+        <InfoCard
           as='a'
           heading='Continuous Learning'
           subheading='Exploring various domains including Cybersecurity, AI, Data Science, Cloud, and Web Development, complemented by a collection of certifications.'

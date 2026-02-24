@@ -1,0 +1,31 @@
+---
+import type { HTMLTag, Polymorphic } from 'astro/types'
+
+type Props<Tag extends HTMLTag> = Polymorphic<{ as: Tag }> & {
+  heading: string
+  subheading?: string
+  date?: string
+  href?: string
+  class?: string
+}
+
+const { as: Tag = 'div', href, heading, subheading, date, class: className } = Astro.props
+---
+
+<Tag
+  class:list={[
+    'flex flex-col gap-y-1.5 rounded-2xl border bg-muted p-5',
+    href && 'transition-all hover:border-foreground/25 hover:shadow-sm',
+    className
+  ]}
+  href={href}
+>
+  <div class='flex flex-wrap items-center justify-between gap-x-2 gap-y-1'>
+    <h3 class='text-base font-medium'>{heading}</h3>
+    {date && <p class='text-sm text-muted-foreground'>{date}</p>}
+  </div>
+  {subheading && <p class='text-base text-muted-foreground'>{subheading}</p>}
+  <div class='mt-2'>
+    <slot />
+  </div>
+</Tag>
