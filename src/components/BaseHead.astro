@@ -72,6 +72,8 @@ const socialImageURL = new URL(ogImage ? ogImage : config.socialCard, Astro.url)
 <meta content={title} property='twitter:title' />
 <meta content={description} property='twitter:description' />
 <meta content={socialImageURL} property='twitter:image' />
+<meta content='@farrosfr_' property='twitter:site' />
+<meta content='@farrosfr_' property='twitter:creator' />
 
 {/* Sitemap */}
 <link href='/sitemap-index.xml' rel='sitemap' />
@@ -105,7 +107,11 @@ const socialImageURL = new URL(ogImage ? ogImage : config.socialCard, Astro.url)
   "jobTitle": "Cyber Security & Data Engineer",
   "sameAs": [
     "https://github.com/farrosfr",
+    "https://x.com/farrosfr_",
     "https://linkedin.com/in/farrosfr",
-    "https://medium.com/@farros"
+    "https://medium.com/@farros",
+    "https://dev.to/farros",
+    "https://youtube.com/@farrosfr",
+    "https://instagram.com/farrosfr"
   ]
 })} />
