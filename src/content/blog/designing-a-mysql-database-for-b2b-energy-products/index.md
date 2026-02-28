@@ -1,7 +1,7 @@
 ---
 title: Designing a MySQL Database for B2B Energy Products
 publishDate: '2026-02-19'
-description: Design a scalable MySQL database for B2B electrical and renewable energy products with tier pricing, categories, brands, and multi-currency support.
+description: Design a basic product data for B2B electrical and renewable energy  products with tier pricing, categories, brands, and multi-currency support.
 tags: [webdev, e-commerce, sql ]
 heroImage: {src: './a.webp'}
 ---
