@@ -7,7 +7,7 @@ export const theme: ThemeUserConfig = {
   /** Will be used in index page & copyright declaration */
   author: 'Mochammad Farros Fatchur Roji',
   /** Description metadata for your website. Can be used in page metadata. */
-  description: 'Personal website of Mochammad Farros Fatchur Roji, Cyber Security Practitioner & Data Engineer sharing red team insights, projects, and technical write-ups.',
+  description: 'Independent research on web vulnerabilities, exploitation techniques, offensive security, and system defense through the lens of data engineering.',
   /** The default favicon for your site which should be a path to an image in the `public/` directory. */
   favicon: '/favicon/favicon.ico',
   /** The default social card image for your site which should be a path to an image in the `public/` directory. */
@@ -27,7 +27,7 @@ export const theme: ThemeUserConfig = {
   /** Set a logo image to show in the homepage. */
   logo: {
     src: '/src/assets/avatar.png',
-    alt: 'Avatar'
+    alt: 'Farros Cybersecurity Research Lab'
   },
 
   // === Global configuration ===
