@@ -104,6 +104,8 @@ const structuredData = {
   prod && (
     <script is:inline>
       const loadAdSense = () => {
+        if (window.adsenseLoaded) return;
+        window.adsenseLoaded = true;
         const script = document.createElement('script');
         script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5768797037683428';
         script.async = true;
@@ -120,6 +122,13 @@ const structuredData = {
       window.addEventListener('scroll', loadAdSense, { passive: true, once: true });
       window.addEventListener('mousemove', loadAdSense, { passive: true, once: true });
       window.addEventListener('touchstart', loadAdSense, { passive: true, once: true });
+
+      // Fallback for bots/verification: load after 5 seconds of idle time
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => setTimeout(loadAdSense, 5000));
+      } else {
+        setTimeout(loadAdSense, 5000);
+      }
     </script>
   )
 }
