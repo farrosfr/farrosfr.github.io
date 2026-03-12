@@ -95,6 +95,17 @@ const structuredData = {
 <meta content='IE=edge' http-equiv='X-UA-Compatible' />
 <title>{siteTitle}</title>
 
+{/* Google AdSense */}
+{
+  prod && (
+    <script
+      async
+      src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5768797037683428'
+      crossorigin='anonymous'
+    />
+  )
+}
+
 {/* Icons / Favicon */}
 <link rel='icon' type={config.favicon.type} href={config.favicon.href} />
 <link rel='shortcut icon' type={config.favicon.type} href={config.favicon.href} />
