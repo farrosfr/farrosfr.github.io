@@ -7,10 +7,10 @@ import { Button, Icon, Label } from 'astro-pure/user'
 import PageLayout from '@/layouts/BaseLayout.astro'
 import config from '@/site-config'
 
-const MAX_POSTS = 10
+const MAX_POSTS = 5
 const allPosts = await getBlogCollection()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
-const uniqueTags = getUniqueTags(allPosts).slice(0, 15) // Limited to top 15 for a cleaner sidebar
+const uniqueTags = getUniqueTags(allPosts).slice(0, 10) // Limited to top 10 for better performance
 
 // Featured posts for authority
 const featuredPostSlugs = ['idor-tryhackme-write-up', 
