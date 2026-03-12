@@ -95,17 +95,32 @@ const structuredData = {
 <meta content='IE=edge' http-equiv='X-UA-Compatible' />
 <title>{siteTitle}</title>
 
-{/* Google AdSense */}
+{/* Performance Optimization */}
+<link rel='preconnect' href='https://pagead2.googlesyndication.com' crossorigin />
+<link rel='dns-prefetch' href='https://pagead2.googlesyndication.com' />
+
+{/* Google AdSense - Delayed Load */}
 {
   prod && (
-    <>
-      <script
-        type='text/partytown'
-        async
-        src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5768797037683428'
-        crossorigin='anonymous'
-      />
-    </>
+    <script is:inline>
+      const loadAdSense = () => {
+        const script = document.createElement('script');
+        script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5768797037683428';
+        script.async = true;
+        script.crossOrigin = 'anonymous';
+        document.head.appendChild(script);
+        
+        // Remove listeners after loading to prevent multiple injections
+        window.removeEventListener('scroll', loadAdSense);
+        window.removeEventListener('mousemove', loadAdSense);
+        window.removeEventListener('touchstart', loadAdSense);
+      };
+
+      // Trigger on first user interaction
+      window.addEventListener('scroll', loadAdSense, { passive: true, once: true });
+      window.addEventListener('mousemove', loadAdSense, { passive: true, once: true });
+      window.addEventListener('touchstart', loadAdSense, { passive: true, once: true });
+    </script>
   )
 }
 
