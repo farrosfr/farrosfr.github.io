@@ -1,10 +1,10 @@
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 // import vercel from '@astrojs/vercel'
+import partytown from '@astrojs/partytown'
 import AstroPureIntegration from 'astro-pure'
 import { defineConfig, fontProviders } from 'astro/config'
 import rehypeKatex from 'rehype-katex'
 import remarkMath from 'remark-math'
-
 
 // Local integrations
 // Local rehype & remark plugins
@@ -53,7 +53,12 @@ export default defineConfig({
     // astro-pure will automatically add sitemap, mdx & unocss
     // sitemap(),
     // mdx(),
-    AstroPureIntegration(config)
+    AstroPureIntegration(config),
+    partytown({
+      config: {
+        forward: ['adsbygoogle.push']
+      }
+    })
     // @playform/compress have potential build issue with this template
     // (await import('@playform/compress')).default({ SVG: false, Exclude: ['index.*.js'] })
 
