@@ -63,10 +63,6 @@ So we try to input `/etc/passwd` and then extract it from the URL. The URL appea
 
 In this second lab, we try to perform a random input, for example "test", and the path that appears is "includes".
 
-> languages
-
-includes
-
 ## Task 5: Local File Inclusion - LFI Continued
 
 This task covers advanced techniques to bypass LFI filters when performing black-box testing:
@@ -111,8 +107,6 @@ When trying to enter the text "test", the only allowed folder is "THM-profile".
 Since we are in Lab #6, where we must use the "THM-profile" path at the beginning, we use: `THM-profile/../../../../etc/os-release`
 
 ![alt text](image-5.png)
-
-> 12.04
 
 ---
 
