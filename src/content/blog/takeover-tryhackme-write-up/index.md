@@ -3,7 +3,7 @@ title: TakeOver | TryHackMe Write-up
 publishDate: '2026-03-02'
 description: Complete walktrough for TakeOver TryHackme room. This challenge revolves around subdomain enumeration.
 tags: [tryhackme, write-up, security, ctf, osint]
-heroImage: {src: './a.webp', alt: 'AI Generated Image'}
+heroImage: {src: './a.webp'}
 ---
 This is my write-up for the TryHackMe room on [TakeOver](https://tryhackme.com/room/takeover). Written in 2026, I hope this write-up helps others learn and practice cybersecurity.
 

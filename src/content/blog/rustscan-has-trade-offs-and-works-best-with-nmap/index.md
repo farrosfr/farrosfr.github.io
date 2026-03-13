@@ -3,7 +3,7 @@ title: RustScan Has Trade-Offs And Works Best With Nmap
 publishDate: '2026-03-06'
 description: RustScan is incredibly fast but noisy and lacks deep analysis. Discover why pairing its speed with Nmap's thoroughness is the best scanning strategy.
 tags: [nmap, security, rust]
-heroImage: {src: './a.webp', alt: 'AI Generated Image'}
+heroImage: {src: './a.webp'}
 ---
 
 RustScan is often praised for its incredible speed, but it's important to understand that this speed comes with certain compromises. While it's a powerful tool in a pentester's arsenal, it's designed to complement—not replace—industry standards like Nmap.

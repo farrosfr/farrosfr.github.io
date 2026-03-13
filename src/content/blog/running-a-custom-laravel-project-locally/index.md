@@ -3,7 +3,7 @@ title: Running a Custom Laravel Project Locally
 publishDate: '2026-03-02'
 description: A comprehensive guide on setting up a Laravel project locally, covering environment configuration, troubleshooting Redis errors, and Vite integration.
 tags: [webdev, php, laravel]
-heroImage: {src: './a.webp', alt: 'AI Generated Image'}
+heroImage: {src: './a.webp'}
 ---
 
 **Note:** This guide is based on a custom Laravel + Vue.js + MySQL project setup. Your configuration may differ depending on your Laravel version, infrastructure, or environment (e.g., Docker, Sail, Redis, queue workers, etc.)

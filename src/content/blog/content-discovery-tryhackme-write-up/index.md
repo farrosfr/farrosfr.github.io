@@ -3,7 +3,7 @@ title: Content Discovery | TryHackMe Write-Up
 publishDate: '2026-02-22'
 description: TryHackMe write-up for “Walking An Application.” Learn how to use browser developer tools to manually discover hidden flags and potential vulnerabilities.
 tags: [tryhackme, write-up, security, ctf]
-heroImage: {src: './a.webp', alt: 'AI Generated Image'}
+heroImage: {src: './a.webp'}
 ---
 This is my write-up for the Content Discovery room on TryHackMe:  
 <https://tryhackme.com/room/contentdiscovery>

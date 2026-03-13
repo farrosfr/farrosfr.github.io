@@ -3,7 +3,7 @@ title: Fixing WSL Ubuntu Setup & Hostname Issues
 publishDate: '2026-02-22'
 description: Step-by-step guide to install Ubuntu on WSL, fix hostname errors, and an honest comparison between WSL and Kali in VirtualBox.
 tags: [linux, security, ctf]
-heroImage: {src: './a.webp', alt: 'AI Generated Image'}
+heroImage: {src: './a.webp'}
 ---
 With Windows Subsystem for Linux (WSL), running a Linux environment on Windows is no longer complicated. The setup is usually smooth until a small configuration detail, like a hostname mismatch, suddenly throws an unexpected and confusing error such as:
 
