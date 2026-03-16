@@ -33,7 +33,7 @@ Broken Access Control happens when an application fails to properly verify serve
 
 **What is the note you found when viewing the user's account who had more than $ 1 million?**
 
-kalian coba coba saja sampe menemukan id yang terdapat flag di dalamnya yaitu <https://bank.thm/accounts?id=7>
+You can just keep trying different IDs until you find the one containing the flag, which is <https://bank.thm/accounts?id=7>
 
 ![alt text](image.png)
 
@@ -47,11 +47,11 @@ Authentication failures occur when an application's login or registration mechan
 
 ![alt text](image-1.png)
 
-silahkan daftar dengan nama akun yang berbeda misal aDmin
+Simply register with a different account name variation, for example, aDmin
 
 ![alt text](image-2.png)
 
-dan kita mendapat akses ke admin
+and we will gain access to the admin account.
 
 > THM{Account.confusion.FTW!}
 
@@ -63,7 +63,7 @@ Without proper logging and alerting, an application lacks accountability, leavin
 
 ![alt text](image-3.png)
 
-di sini kita bisa melihat berbagai upaya untuk login ya
+Here we can see the various login attempts.
 
 > 203.0.113.45
 
@@ -75,7 +75,7 @@ di sini kita bisa melihat berbagai upaya untuk login ya
 
 ![alt text](image-4.png)
 
-ini adalah path yang terlihat untuk berusaha di bobol oleh penyerang
+This is the path that the attacker appears to be trying to breach.
 
 > /supersecretadminstuff
 
