@@ -112,4 +112,4 @@ For this project, speed-to-production mattered more than architectural purity.
 ---
 **Need help with Laravel e-commerce or VPS deployment?**
 
-DM me on **[LinkedIn](https://www.linkedin.com/in/farrosfr/)** or email **[hello@farrosfr.com](mailto:hello@farrosfr.com)** 🚀
+DM me on **[LinkedIn](https://www.linkedin.com/in/farrosfr/)** or email **[hello@farros.co](mailto:hello@farros.co)** 🚀

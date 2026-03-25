@@ -24,7 +24,7 @@ So technically, **JAM** is an acronym for:
 * APIs
 * Markup
 
-## 2\. Why Does the farrosfr.com Website Use Jamstack?
+## 2\. Why Does the farros.co Website Use Jamstack?
 
 Here are some points that are used.
 
@@ -88,7 +88,7 @@ We don't need all of them, just choose one from each category.
 * Choose one of the hosting platforms mentioned earlier (Vercel, Netlify, or Cloudflare Pages).
 * Import the project from the github you just created.
 * The hosting platform will detect the project as an Astro project, then click deploy.
-* Done, then we can change the public URL to our own domain, for example `farrosfr.com`.
+* Done, then we can change the public URL to our own domain, for example `farros.co`.
 
 So, every time we `git push` to Github, Netlify or another server platform will automatically rebuild and deploy the latest version of our website. This is called **CI/CD (Continuous Integration/Continuous Deployment)**.
 

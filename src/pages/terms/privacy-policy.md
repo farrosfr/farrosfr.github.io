@@ -35,7 +35,7 @@ Reasonable technical measures are taken to protect the integrity of this website
 ## 5. Contact
 
 For privacy-related questions, contact:
-📧 [hello@farrosfr.com](mailto:hello@farrosfr.com)
+📧 [hello@farros.co](mailto:hello@farros.co)
 
 ---
 
