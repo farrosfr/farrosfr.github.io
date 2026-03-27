@@ -11,7 +11,8 @@ import config from '@/site-config'
 const MAX_POSTS = 10
 const allPosts = await getBlogCollection()
 const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS)
-const uniqueTags = getUniqueTags(allPosts).slice(0, 10) // Limited to top 10 for better performance
+const uniqueTags = getUniqueTags(allPosts).slice(0, 10)
+const latestPost = allPostsByDate[0]
 
 // Featured posts for authority
 const featuredPostSlugs = ['idor-tryhackme-write-up', 
@@ -32,38 +33,132 @@ if (!images[imagePath])
 
 <PageLayout 
   meta={{ 
-    title: 'Cybersecurity Research & Vulnerability Lab | Farros',
-    description: 'Independent research on web vulnerabilities, exploitation techniques, offensive security, and system defense through the lens of data engineering.'
+    title: 'Farros | Web Security Researcher & Technical Advisor',
+    description: 'Independent research on web vulnerabilities and professional consultancy in architecture, cybersecurity, and web security audits.'
   }} 
   highlightColor='#659EB9'
 >
-  <main class='flex w-full flex-col items-center'>
-    <!-- 1. Authority Header - Tightened Spacing -->
-    <section class='animate mb-8 flex flex-col items-center w-full border-b pb-8' id='content-header'>
-      <div class='flex flex-col items-center gap-y-4 text-center'>
-        <h1 class='text-3xl font-bold tracking-tight sm:text-5xl'>
-          Cybersecurity Research & <span class="text-primary">Vulnerability Lab</span>
-        </h1>
-        <p class='max-w-3xl text-muted-foreground text-lg leading-relaxed'>
-          Independent research on web vulnerabilities, exploitation techniques, offensive security, and system defense through the lens of data engineering.
-        </p>
+  <main class='flex w-full flex-col items-center overflow-x-hidden'>
+    <!-- 1. Hero Section (100vh) -->
+    <section class='relative flex min-h-[calc(100vh-80px)] w-full flex-col justify-center py-10 sm:py-0'>
+      <div class='grid grid-cols-1 items-center gap-y-12 lg:grid-cols-2 lg:gap-x-16'>
         
-        <div class='flex flex-wrap justify-center gap-x-7 gap-y-3 mt-1'>
-          <Label title='GitHub' as='a' href='https://github.com/farrosfr' target='_blank'>
-            <Icon name='github' class='size-5' slot='icon' />
-          </Label>
-          <Label title='LinkedIn' as='a' href='https://www.linkedin.com/in/farrosfr/' target='_blank'>
-            <Icon name='link' class='size-5' slot='icon' />
-          </Label>
-          <Label title='RSS Feed' as='a' href='/rss.xml'>
-            <Icon name='rss' class='size-5' slot='icon' />
-          </Label>
+        <!-- Text Content (Left) -->
+        <div class='flex flex-col items-start gap-y-6 animate'>
+          <div class='flex flex-col gap-y-2'>
+            <span class='text-primary font-medium tracking-wider uppercase text-sm'>Available for projects</span>
+            <h1 class='text-5xl font-bold tracking-tight sm:text-7xl leading-tight'>
+              Hi, I'm <span class="text-primary">Farros.</span>
+            </h1>
+            <h2 class='text-2xl font-semibold text-muted-foreground sm:text-3xl'>
+              Web Security Researcher & Technical Advisor
+            </h2>
+          </div>
+          
+          <p class='max-w-xl text-muted-foreground text-lg leading-relaxed'>
+            Independent security researcher helping teams build secure web applications through targeted vulnerability assessments and architectural advisory.
+          </p>
+          
+          <div class='flex flex-wrap gap-4'>
+            <Button title='View Projects' href='/projects' variant='ahead' class='px-8 py-6 text-base' />
+            <Button title='Contact Me' href='mailto:hello@farros.co' variant='button' class='px-8 py-6 text-base' />
+          </div>
         </div>
+
+        <!-- Widget (Right) - GitHub Contribution Graph -->
+        <div class='animate delay-150 flex flex-col gap-y-4'>
+          <div class='rounded-3xl border bg-muted/30 p-6 shadow-sm backdrop-blur-sm'>
+            <div class='flex items-center justify-between mb-6'>
+              <div class='flex items-center gap-x-3'>
+                <div class='size-10 rounded-full bg-primary/10 flex items-center justify-center'>
+                  <Icon name='github' class='size-6 text-primary' />
+                </div>
+                <div>
+                  <h3 class='font-bold text-sm'>Contributions</h3>
+                  <p class='text-[10px] text-muted-foreground uppercase tracking-widest'>github.com/farrosfr</p>
+                </div>
+              </div>
+              <span class='text-[10px] font-bold text-muted-foreground uppercase tracking-widest'>2025 - 2026</span>
+            </div>
+            
+            <div class='w-full overflow-hidden rounded-lg opacity-80 hover:opacity-100 transition-opacity'>
+              <img 
+                src="https://ghchart.rshah.org/659EB9/farrosfr" 
+                alt="farrosfr's Github chart" 
+                class="w-full h-auto dark:invert dark:hue-rotate-180 dark:brightness-110"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <a href="https://b2b.kiw.co.id" target="_blank" class='group rounded-2xl border bg-primary/5 p-4 flex items-center justify-between hover:bg-primary/10 hover:border-primary/50 transition-all cursor-pointer'>
+            <div class='flex items-center gap-x-3'>
+              <div class='size-3 rounded-full bg-green-500 animate-pulse'></div>
+              <span class='text-xs font-medium uppercase tracking-wider group-hover:text-primary transition-colors'>Currently Developing KIW Commerce App</span>
+            </div>
+            <Icon name='link' class='size-4 text-primary opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all' />
+          </a>
+        </div>
+      </div>
+
+      <div class='animate delay-300 mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 w-full'>
+  
+      <div class='group rounded-2xl border bg-card p-5 hover:border-primary/50 transition-all flex flex-col gap-y-3'>
+        <div class='flex items-center justify-between'>
+          <span class='text-xs font-bold uppercase tracking-widest text-primary'>Current Focus</span>
+          <Icon name='github' class='size-4 text-muted-foreground opacity-20 group-hover:opacity-100 transition-opacity' />
+        </div>
+        <p class='text-sm leading-relaxed font-medium'>
+          Independent research on web vulnerabilities & technical security.
+        </p>
+      </div>
+
+      <a href={`/blog/${latestPost.id}`} class='group rounded-2xl border bg-card p-5 hover:border-primary/50 transition-all flex flex-col justify-between gap-y-3'>
+        <div class='flex items-center justify-between'>
+          <span class='text-xs font-bold uppercase tracking-widest text-orange-500'>Latest Write-up</span>
+          <Icon name='link' class='size-4 text-muted-foreground opacity-20 group-hover:opacity-100 transition-opacity' />
+        </div>
+        <div class='flex flex-col gap-y-1'>
+          <h3 class='text-sm font-bold line-clamp-1 group-hover:text-primary transition-colors'>{latestPost.data.title}</h3>
+          <span class='text-xs text-muted-foreground'>{latestPost.data.publishDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
+        </div>
+      </a>
+
+      <div class='group rounded-2xl border bg-card p-5 hover:border-primary/50 transition-all flex flex-col gap-y-3'>
+        <div class='flex items-center justify-between'>
+          <span class='text-xs font-bold uppercase tracking-widest text-blue-500'>Security Stack</span>
+          <Icon name='rss' class='size-4 text-muted-foreground opacity-20 group-hover:opacity-100 transition-opacity' />
+        </div>
+        <p class='text-sm leading-relaxed font-mono text-muted-foreground'>
+          Burp Suite · Nmap · Python · Bash · OWASP Top 10
+        </p>
+      </div>
+
+      <div class='group rounded-2xl border bg-card p-5 hover:border-primary/50 transition-all flex flex-col gap-y-3'>
+        <div class='flex items-center justify-between'>
+          <span class='text-xs font-bold uppercase tracking-widest text-purple-500'>Find Me</span>
+          <div class='flex gap-x-2'>
+            <a href="https://github.com/farrosfr" target="_blank" class='hover:text-primary transition-colors'><Icon name='github' class='size-4' /></a>
+            <a href="https://linkedin.com/in/farrosfr" target="_blank" class='hover:text-primary transition-colors'><Icon name='link' class='size-4' /></a>
+          </div>
+        </div>
+        <div class='flex flex-col gap-y-1'>
+          <a href="mailto:hello@farros.co" class='text-sm font-medium hover:underline'>hello@farros.co</a>
+          <span class='text-xs text-muted-foreground uppercase tracking-widest'>Based in Indonesia</span>
+        </div>
+      </div>
+      
+    </div>
+
+      <!-- Scroll Indicator -->
+      <div class='absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden sm:flex flex-col items-center gap-y-2 opacity-50 hover:opacity-100 transition-opacity cursor-pointer'>
+        <span class='text-xs font-bold uppercase tracking-widest'>Scroll</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
       </div>
     </section>
 
-    <!-- 2. Main Content -->
-    <div id='content' class='animate flex flex-col gap-y-12 w-full'>
+    <!-- 2. Latest Articles Section (Below the fold) -->
+    <div id='content' class='animate mt-20 flex flex-col gap-y-12 w-full'>
       
       <!-- Combined Publication Feed & Sidebar -->
       <div class='grid grid-cols-1 gap-x-12 gap-y-10 lg:grid-cols-[1fr_320px]'>
@@ -72,7 +167,7 @@ if (!images[imagePath])
         <section class='flex flex-col gap-y-4'>
           <div class='flex items-center justify-between border-b pb-4'>
             <h2 class='text-2xl font-bold flex items-center'>
-              <Icon name='link' class='me-3 size-6 text-primary' />
+              <Icon name='rss' class='me-3 size-6 text-primary' />
               Latest Articles
             </h2>
             <a href='/blog' class='text-sm text-muted-foreground hover:text-primary transition-colors'>View Archives →</a>
@@ -91,14 +186,14 @@ if (!images[imagePath])
 
         <!-- Sidebar -->
         <aside class='flex flex-col gap-y-8'>
-          <!-- Tags Cloud - Compact Layout -->
+          <!-- Tags Cloud -->
           <div class='rounded-2xl border bg-muted/30 p-4'>
             <h2 class='mb-3 flex items-center text-sm font-bold uppercase tracking-widest text-muted-foreground'>
               <Icon name='github' class='me-2 size-4' />
               Top Topics
             </h2>
             <ul class='flex flex-wrap gap-1.5'>
-              {uniqueTags.map((tag) => (
+              {uniqueTags.map((tag: string) => (
                 <li>
                   <Button title={tag} href={`/tags/${tag}`} variant='pill' class='text-[11px] bg-background hover:bg-primary hover:text-primary-foreground transition-all' />
                 </li>
@@ -106,7 +201,7 @@ if (!images[imagePath])
             </ul>
           </div>
 
-          <!-- Featured Quick Links -->
+          <!-- Featured Reads -->
           <div class='flex flex-col gap-y-4 px-2'>
             <h2 class='flex items-center text-sm font-bold uppercase tracking-widest text-muted-foreground'>
               <Icon name='link' class='me-2 size-4 text-yellow-500' />
@@ -115,24 +210,40 @@ if (!images[imagePath])
             <div class='flex flex-col gap-y-3'>
               {featuredPosts.map((p) => (
                 <a href={`/blog/${p.id}`} class='group flex flex-col gap-y-0.5'>
-                  <span class='text-sm font-medium group-hover:text-primary transition-colors line-clamp-2'>{p.data.title}</span>
-                  <span class='text-[10px] uppercase tracking-wider text-muted-foreground'>{p.data.publishDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  <span class='text-sm font-medium group-hover:text-primary transition-colors line-clamp-2 leading-tight'>{p.data.title}</span>
+                  <span class='text-[10px] uppercase tracking-wider text-muted-foreground'>{p.data.publishDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}</span>
                 </a>
               ))}
             </div>
           </div>
 
-          <!-- About Card -->
-          <div class='rounded-2xl border p-5 bg-gradient-to-br from-primary/5 to-transparent text-sm'>
-            <h3 class='mb-2 font-bold text-base text-primary'>The Researcher</h3>
-            <p class='leading-relaxed text-muted-foreground mb-4'>
-              <strong>Mochammad Farros Fatchur Roji</strong> is an independent Security Researcher and professional Data Engineer specializing in offensive security and secure data architecture. 
+          <!-- About/CTA Card -->
+          <div class='group flex flex-col justify-between rounded-2xl border border-border bg-gradient-to-br from-primary/5 to-transparent p-6 transition-all hover:border-primary/50'>
+  
+          <div class='mb-6'>
+            <h3 class='mb-2 text-base font-bold tracking-wide text-primary'>The Laboratory</h3>
+            <p class='text-sm leading-relaxed text-muted-foreground'>
+              Exploring the boundaries of offensive security and data-driven defense systems.
             </p>
-            <div class='flex gap-2'>
-              <Button title='Full Profile' href='/about' variant='button' class='flex-1 justify-center text-xs shadow-sm' />
-              <Button title='View Projects' href='/projects' variant='button' class='flex-1 justify-center text-xs shadow-sm' />
-            </div>
           </div>
+
+          <div class='flex flex-col gap-y-3'>
+            <Button 
+              title='Request Audit' 
+              href='mailto:hello@farros.co' 
+              variant='ahead' 
+              class='w-full justify-center text-xs font-semibold shadow-sm transition-transform hover:-translate-y-0.5' 
+            />
+            
+            <Button 
+              title='Full Profile' 
+              href='/about' 
+              variant='button' 
+              class='w-full justify-center text-xs font-medium opacity-80 hover:opacity-100' 
+            />
+          </div>
+
+        </div>
         </aside>
 
       </div>
@@ -140,3 +251,12 @@ if (!images[imagePath])
     </div>
   </main>
 </PageLayout>
+
+<style>
+  .delay-150 {
+    animation-delay: 150ms;
+  }
+  .delay-300 {
+    animation-delay: 300ms;
+  }
+</style>
