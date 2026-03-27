@@ -1,7 +1,7 @@
 ---
 title:  "Operating Systems: Introduction | TryHackMe Write-up"
 publishDate: '2026-03-26'
-description: "Complete walktrough for Operating Systems: Introduction TryHackme room. Explore the basics of operating systems and the core features that power your computer."
+description: "Complete walkthrough for Operating Systems: Introduction TryHackme room. Explore the basics of operating systems and the core features that power your computer."
 tags: [tryhackme, write-up, security, ctf,os]
 heroImage: {src: './unnamed.webp'}
 ---
@@ -54,7 +54,7 @@ Users typically interact with an OS through two main interfaces: a Graphical Use
 
 ![ext4](image-1.png)
 
-standard Ubuntu VM environments
+standard Ubuntu VM environment
 
 > ext4
 
