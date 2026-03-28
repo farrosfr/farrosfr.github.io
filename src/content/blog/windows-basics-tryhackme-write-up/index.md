@@ -71,7 +71,6 @@ flag: THM{welcome_to_tryhatme!}
 
 > THM{welcome_to_tryhatme!}
 
-
 **Investigate the Time & Language section of the Windows Settings app. Which country or region is your computer currently set to?**
 
 Use the region settings and see if United States is the answer.

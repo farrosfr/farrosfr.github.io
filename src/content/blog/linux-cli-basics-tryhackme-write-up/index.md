@@ -1,6 +1,6 @@
 ---
 title: Linux CLI Basics | TryHackMe Write-up
-publishDate: '2026-03-28
+publishDate: 2026-03-28
 description: Complete walktrough for Linux CLI Basics TryHackme room. Get comfortable navigating through the Linux CLI.
 tags: [tryhackme, write-up, security, ctf, linux]
 heroImage: {src: './1.webp'}
