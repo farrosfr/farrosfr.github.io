@@ -1,8 +1,5 @@
 {
   "name": "farros-co",
-  "workspaces": [
-    "packages/*"
-  ],
   "type": "module",
   "version": "4.1.0",
   "scripts": {
