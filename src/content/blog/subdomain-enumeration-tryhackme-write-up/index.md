@@ -1,7 +1,7 @@
 ---
 title: Subdomain Enumeration | TryHackMe Write-up
 publishDate: '2026-02-24'
-description: Complete walktrough for Subdomain Enumeration TryHackme room. Learn the various ways of discovering subdomains to expand your attack surface of a target.
+description: Complete walkthrough for Subdomain Enumeration TryHackme room. Learn the various ways of discovering subdomains to expand your attack surface of a target.
 tags: [tryhackme, write-up, security, ctf, osint]
 heroImage: {src: './a.webp'}
 ---

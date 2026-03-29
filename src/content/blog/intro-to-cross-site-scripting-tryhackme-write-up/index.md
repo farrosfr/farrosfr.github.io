@@ -1,7 +1,7 @@
 ---
 title: Intro to Cross-site Scripting | TryHackMe Write-up
 publishDate: '2026-03-18'
-description: Walktrough for Intro to Cross-site Scripting TryHackme room. Learn how to detect and exploit XSS vulnerabilities, giving you control of other visitor's browsers
+description: Walkthrough for Intro to Cross-site Scripting TryHackme room. Learn how to detect & exploit XSS vulnerabilities, giving you control of other visitor's browsers
 tags: [tryhackme, write-up, security, ctf, xss]
 heroImage: {src: './1.webp'}
 ---

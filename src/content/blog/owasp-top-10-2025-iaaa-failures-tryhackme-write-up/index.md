@@ -1,7 +1,7 @@
 ---
 title: "OWASP Top 10 2025: IAAA Failures | TryHackMe Write-up"
 publishDate: '2026-03-16'
-description: "Walktrough for OWASP Top 10 2025: IAAA Failures TryHackme room. Learn about A01, A07, and A09 in how they related to failures in the applied IAAA model"
+description: "Walkthrough for OWASP Top 10 2025: IAAA Failures TryHackme room. Learn about A01, A07, and A09 in how they related to failures in the applied IAAA model"
 tags: [tryhackme, write-up, security, ctf, owasp]
 heroImage: {src: './1.webp'}
 ---

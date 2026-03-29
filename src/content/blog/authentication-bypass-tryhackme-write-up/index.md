@@ -1,7 +1,7 @@
 ---
 title: Authentication Bypass | TryHackMe Write-up 
 publishDate: '2026-02-28'
-description: Walktrough for Authentication Bypass TryHackMe room. Learn how to defeat logins and other authentication mechanisms to allow you access to unpermitted areas.
+description: Walkthrough for Authentication Bypass TryHackMe room. Learn how to defeat logins and other authentication mechanisms to allow you access to unpermitted areas.
 tags: [tryhackme, write-up, security, ctf, auth]
 heroImage: {src: './a.webp'}
 ---

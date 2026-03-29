@@ -1,7 +1,7 @@
 ---
 title: TakeOver | TryHackMe Write-up
 publishDate: '2026-03-02'
-description: Complete walktrough for TakeOver TryHackme room. This challenge revolves around subdomain enumeration.
+description: Complete walkthrough for TakeOver TryHackme room. This challenge revolves around subdomain enumeration.
 tags: [tryhackme, write-up, security, ctf, osint]
 heroImage: {src: './a.webp'}
 ---

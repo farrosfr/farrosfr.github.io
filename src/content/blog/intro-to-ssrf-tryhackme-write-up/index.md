@@ -1,7 +1,7 @@
 ---
 title: Intro to SSRF | TryHackMe Write-up
 publishDate: '2026-03-16'
-description: Complete walktrough for Intro to SSRF TryHackme room. Learn how to exploit SSRF vulnerabilities, allowing you to access internal server resources.
+description: Complete walkthrough for Intro to SSRF TryHackme room. Learn how to exploit SSRF vulnerabilities, allowing you to access internal server resources.
 tags: [tryhackme, write-up, security, ctf, ssrf, web-security]
 heroImage: {src: './1.webp'}
 ---

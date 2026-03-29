@@ -1,7 +1,7 @@
 ---
 title: Inside a Computer System | TryHackMe Write-up
 publishDate: '2026-03-20'
-description: Complete walktrough for Inside a Computer System TryHackme room. This room covers the basic components of a computer system.
+description: Complete walkthrough for Inside a Computer System TryHackme room. This room covers the basic components of a computer system.
 tags: [tryhackme, write-up, security, ctf]
 heroImage: {src: './1.webp'}
 ---

@@ -1,7 +1,7 @@
 ---
 title: Offensive Security Intro | TryHackMe Write-up
 publishDate: '2026-03-20'
-description: Complete walktrough for Offensive Security Intro TryHackme room. Hack your first website (legally in a safe environment) and experience an ethical hacker's job.
+description: Complete walkthrough for Offensive Security Intro TryHackme room. Hack your first website (legally in a safe environment) & experience an ethical hacker's job.
 tags: [tryhackme, write-up, security, ctf]
 heroImage: {src: './1.webp'}
 ---

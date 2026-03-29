@@ -1,7 +1,7 @@
 ---
 title: Computer Types | TryHackMe Write-up
 publishDate: '2026-03-21'
-description: Complete walktrough for Computer Types TryHackme room. Explore the different types of computers, from laptops to the tiny chips inside your coffee machine.
+description: Complete walkthrough for Computer Types TryHackme room. Explore the different types of computers, from laptops to the tiny chips inside your coffee machine.
 tags: [tryhackme, write-up, security, ctf]
 heroImage: {src: './unnamed.webp'}
 ---

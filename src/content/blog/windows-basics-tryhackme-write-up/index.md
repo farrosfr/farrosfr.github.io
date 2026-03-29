@@ -1,7 +1,7 @@
 ---
 title: Windows Basics | TryHackMe Write-up
 publishDate: '2026-03-27'
-description: Complete walktrough for Windows Basics TryHackme room. Learn to navigate Windows, manage files, and use essential system tools.
+description: Complete walkthrough for Windows Basics TryHackme room. Learn to navigate Windows, manage files, and use essential system tools.
 tags: [tryhackme, write-up, security, ctf, os]
 heroImage: {src: './1.webp'}
 ---

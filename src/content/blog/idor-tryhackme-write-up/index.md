@@ -1,7 +1,7 @@
 ---
 title: IDOR | TryHackMe Write-up
 publishDate: '2026-02-28'
-description: Walktrough for IDOR TryHackme room. Learn how to find and exploit IDOR vulnerabilities in a web application giving you access to data that you shouldn't have.
+description: Walkthrough for IDOR TryHackme room. Learn how to find and exploit IDOR vulnerabilities in a web application giving you access to data that you shouldn't have.
 tags: [tryhackme, write-up, security, ctf, idor]
 heroImage: {src: './a.webp', alt: 'AI Generated'}
 ---
