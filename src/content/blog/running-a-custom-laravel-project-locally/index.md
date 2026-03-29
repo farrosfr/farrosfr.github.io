@@ -50,14 +50,14 @@ Checking Composer ensures that the dependency manager is globally accessible and
 
 Configure your `.env` file to point to your local development server:
 
-```env
+```bash
 APP_URL="http://localhost:8000"
 ASSET_URL="http://localhost:8000"
 ```
 
 Next, ensure your MySQL service is active and the database credentials match your local setup:
 
-```env
+```bash
 DB_CONNECTION=mysql
 DB_HOST="localhost"
 DB_PORT="3306"
@@ -136,7 +136,7 @@ To fix this, switch your drivers to use the `file` or `database` system in your 
 
 **From:**
 
-```env
+```bash
 CACHE_DRIVER=redis
 SESSION_DRIVER=redis
 QUEUE_CONNECTION=database
@@ -144,7 +144,7 @@ QUEUE_CONNECTION=database
 
 **To:**
 
-```env
+```bash
 CACHE_DRIVER=file
 SESSION_DRIVER=file
 QUEUE_CONNECTION=sync
@@ -164,7 +164,7 @@ php artisan serve
 
 If the application fails to load, enable debug mode in `.env` to see detailed error messages:
 
-```env
+```bash
 APP_DEBUG=true
 ```
 
@@ -193,7 +193,7 @@ npm install
 
 Some projects rely on specific environment variables in the frontend. You might need to add:
 
-```env
+```bash
 VITE_APP_NAME="${APP_NAME}"
 ```
 

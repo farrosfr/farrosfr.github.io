@@ -42,7 +42,7 @@ For developer portfolio purposes, contributions should be credited to the person
 
 1. **Git Author Configuration:** Before the first commit, set the Git identity on the VPS with the command:
 
-    ```git
+    ```bash
     git config --global user.name "farrosfr"
     # Using the noreply email from GitHub for privacy
     git config --global user.email "ID+farrosfr@users.noreply.github.com"

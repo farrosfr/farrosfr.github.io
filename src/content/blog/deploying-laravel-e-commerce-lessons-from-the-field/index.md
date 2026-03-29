@@ -19,7 +19,7 @@ The initial local development phase involved:
 
 The `.env` configuration during local setup:
 
-```env
+```bash
 APP_NAME="sonusweb"
 APP_URL="http://localhost"
 APP_ENV=local
@@ -60,7 +60,7 @@ Due to persistent local development issues, the strategy shifted to duplicating 
 - Copying project files to a new directory.
 - Updating the `.env` file with production settings for the new deployment:
 
-```env
+```bash
 APP_NAME="NEW_APP"
 APP_URL="NEW_URL"
 APP_ENV=production
