@@ -17,4 +17,4 @@ You are solely responsible for how you apply the information shared on this site
 
 ---
 
-> Built and maintained by Mochammad Farros Fatchur Roji — Full-Stack Web & Red Team.
+> Built and maintained by Mochammad Farros Fatchur Roji

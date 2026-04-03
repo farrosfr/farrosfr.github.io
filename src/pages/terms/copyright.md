@@ -26,4 +26,4 @@ For licensing inquiries, please contact via email.
 
 ---
 
-> Built and maintained by Mochammad Farros Fatchur Roji — Full-Stack Web & Red Team.
+> Built and maintained by Mochammad Farros Fatchur Roji

@@ -39,4 +39,4 @@ For privacy-related questions, contact:
 
 ---
 
-> Built and maintained by Mochammad Farros Fatchur Roji — Full-Stack Web & Red Team.
+> Built and maintained by Mochammad Farros Fatchur Roji

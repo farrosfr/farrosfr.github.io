@@ -33,4 +33,4 @@ The author shall not be held liable for any direct or indirect damages resulting
 
 ---
 
-> Built and maintained by Mochammad Farros Fatchur Roji — Full-Stack Web & Red Team.
+> Built and maintained by Mochammad Farros Fatchur Roji
