@@ -11,6 +11,12 @@ This is my write-up for the TryHackMe room on [Race Conditions](https://tryhackm
 
 This task introduces the concept of a race condition vulnerability. A race condition occurs when the timing or sequence of events influences a program's behavior, typically happening when multiple threads access and modify a variable without proper synchronization locks. This flaw can allow attackers to abuse systems, such as applying a single discount multiple times or spending beyond their account balance.
 
+### Prerequisites
+
+- [How the Web Works](https://tryhackme.com/module/how-the-web-works)
+- [Packets and Frames](https://tryhackme.com/room/packetsframes)
+- [Burp Suite: The Basics](https://tryhackme.com/r/room/burpsuitebasics)
+
 **I know all the prerequisites. Let the race begin!**
 > No answer needed
 
