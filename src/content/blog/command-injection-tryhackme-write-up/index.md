@@ -1,7 +1,7 @@
 ---
 title: Command Injection | TryHackMe Write-up
 publishDate: '2026-4-3'
-description: Wwalkthrough for Command Injection TryHackme room. Learn about a vulnerability allowing you to execute commands through a vulnerable app, and its remediations.
+description: Walkthrough for Command Injection TryHackme room. Learn about a vulnerability allowing you to execute commands through a vulnerable app, and its remediations.
 tags: [tryhackme, write-up, security, ctf]
 heroImage: {src: './1.webp'}
 ---
