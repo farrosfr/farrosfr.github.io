@@ -108,7 +108,7 @@ For user 07799991337, we can see that they have a negative balance due to a larg
 
 Yes, the transfer was successful and we have got the flag.
 
-> THM{PHONE-Race} *(Note: You will need to run the target VM and perform the attack to get the dynamic flag value)*
+> THM{PHONE-Race}
 
 ## Task 6: Detection and Mitigation
 
@@ -129,7 +129,7 @@ I'll try logging in as Rasser Cond first. Let's see.
 
 ![alt text](image-10.png)
 
-Let's try transferring $100. In this scenario, the target amount would only be $95 due to the $5 transfer fee. Let's enable FoxyProxy for Burp, then enable the intercept feature in Burp Suite, don't forget.
+Let's try transferring 100. In this scenario, the target amount would only be 100. In this scenario, the target amount would only be 95 due to the $5 transfer fee. Let's enable FoxyProxy for Burp, then enable the intercept feature in Burp Suite, don't forget.
 
 ![alt text](image-11.png)
 
