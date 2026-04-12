@@ -44,8 +44,8 @@ if (!images[imagePath])
       <div class='grid grid-cols-1 items-center gap-y-12 lg:grid-cols-2 lg:gap-x-16'>
         
         <!-- Text Content (Left) -->
-        <div class='flex flex-col items-start gap-y-6 animate'>
-          <div class='flex flex-col gap-y-2'>
+        <div class='flex flex-col items-start gap-y-8 animate'>
+          <div class='flex flex-col gap-y-4'>
             <span class='text-primary font-medium tracking-wider uppercase text-sm'>Available for projects</span>
             <h1 class='text-5xl font-bold tracking-tight sm:text-6xl leading-tight'>
               Hello, I'm <span class="text-primary">Farros</span>
@@ -54,14 +54,14 @@ if (!images[imagePath])
               Cybersecurity Researcher & Technical Advisor
             </h2>
           </div>
-          
+
           <p class='max-w-xl text-muted-foreground text-lg leading-relaxed'>
             Independent security researcher helping teams build secure applications through targeted vulnerability assessments and architectural advisory.
           </p>
-          
-          <div class='flex flex-wrap gap-4'>
-            <Button title='View Projects' href='/projects' variant='ahead' class='px-8 py-6 text-base' />
-            <Button title='Contact Me' href='mailto:hello@farros.co' variant='button' class='px-8 py-6 text-base' />
+
+          <div class='flex flex-col sm:flex-row w-full sm:w-auto gap-3'>
+            <Button title='View Projects' href='/projects' variant='ahead' class='w-full sm:w-auto px-8 py-4 text-base' />
+            <Button title='Contact Me' href='mailto:hello@farros.co' variant='button' class='w-full sm:w-auto px-8 py-4 text-base opacity-80' />
           </div>
         </div>
 
@@ -75,25 +75,26 @@ if (!images[imagePath])
                 </div>
                 <div>
                   <h3 class='font-bold text-sm'>Contributions</h3>
-                  <p class='text-[10px] text-muted-foreground uppercase tracking-widest'>github.com/farrosfr</p>
+                  <p class='text-xs text-muted-foreground uppercase tracking-widest'>github.com/farrosfr</p>
                 </div>
               </div>
-              <span class='text-[10px] font-bold text-muted-foreground uppercase tracking-widest'>2025 - 2026</span>
+              <span class='text-xs font-bold text-muted-foreground uppercase tracking-widest'>2025 - 2026</span>
             </div>
-            
-            <div class='w-full overflow-hidden rounded-lg opacity-80 hover:opacity-100 transition-opacity'>
-              <img 
-                src="https://ghchart.rshah.org/659EB9/farrosfr" 
-                alt="farrosfr's Github chart" 
-                class="w-full h-auto dark:invert dark:hue-rotate-180 dark:brightness-110"
-                loading="lazy"
-              />
+
+            <div class='w-full overflow-x-auto rounded-lg opacity-80 hover:opacity-100 transition-opacity scrollbar-hide'>
+              <div class="min-w-[600px]">
+                <img
+                  src="https://ghchart.rshah.org/659EB9/farrosfr"
+                  alt="farrosfr's Github chart"
+                  class="w-full h-auto dark:invert dark:hue-rotate-180 dark:brightness-110"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
-
-          <a href="https://b2b.kiw.co.id" target="_blank" class='group rounded-2xl border bg-primary/5 p-4 flex items-center justify-between hover:bg-primary/10 hover:border-primary/50 transition-all cursor-pointer'>
+          <a href="https://shop.kiw.co.id" target="_blank" class='group rounded-2xl border bg-primary/5 px-5 py-4 flex items-center justify-between hover:bg-primary/10 hover:border-primary/50 transition-all cursor-pointer'>
             <div class='flex items-center gap-x-3'>
-              <div class='size-3 rounded-full bg-green-500 animate-pulse'></div>
+              <div class='size-2.5 rounded-full bg-green-500 animate-pulse'></div>
               <span class='text-xs font-medium uppercase tracking-wider group-hover:text-primary transition-colors'>Currently Developing KIW Commerce App</span>
             </div>
             <Icon name='link' class='size-4 text-primary opacity-70 group-hover:opacity-100 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all' />
