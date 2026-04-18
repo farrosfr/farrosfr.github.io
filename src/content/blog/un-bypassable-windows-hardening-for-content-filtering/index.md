@@ -148,6 +148,20 @@ The most critical layer. All the settings above can be reversed if the user has 
 
 This final step also prevents the installation of **VPNs, Proxies, or Portable Browsers** that could tunnel traffic past our DNS filters. Since a Standard User cannot install new network drivers, they are effectively locked into the hardened environment.
 
+## Layer 6: The Firewall Layer (IP Blocking)
+
+DNS filtering only blocks domain names. If a site uses a direct IP address (like many movie piracy sites), you must block the "number" itself using the Windows Firewall.
+
+```powershell
+# Block specific malicious IPs directly
+New-NetFirewallRule -DisplayName "Block Malicious IPs" `
+    -Direction Outbound `
+    -Action Block `
+    -RemoteAddress "162.244.93.0/24", "195.63.129.0/24", "139.59.72.0/24", "167.71.201.0/24", "139.59.34.0/24", "165.232.170.0/24", "146.190.87.0/24", "129.212.208.0/24","159.203.161.0/24","165.245.144.0/24","143.110.182.0/24","154.93.72.0/24","159.223.73.0/24"
+```
+
+Since the user is a **Standard User (Layer 5)**, they cannot modify or delete these firewall rules.
+
 ---
 
 ## How to Verify Your Setup
