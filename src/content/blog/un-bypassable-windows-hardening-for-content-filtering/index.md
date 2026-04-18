@@ -188,6 +188,24 @@ Add these to your "My filters" tab in uBlock Origin:
 
 This ensures that even if a new domain appears, if it uses the same branding or content markers, it will be instantly hidden.
 
+## Layer 8: Extension Persistence (The Force Install)
+
+Layer 7 is only effective if the uBlock Origin extension remains active. A savvy user might try to disable or uninstall the extension to bypass your keyword filters. We can use Windows Registry policies to "force-install" the extension, making it impossible for a Standard User to remove or disable it from the browser settings.
+
+Run this in PowerShell as Admin to lock uBlock Origin into Firefox:
+
+```powershell
+# Create the Extension Settings policy path
+$firefoxPolicyPath = "HKLM:\SOFTWARE\Policies\Mozilla\Firefox\ExtensionSettings"
+if (!(Test-Path $firefoxPolicyPath)) { New-Item -Path $firefoxPolicyPath -Force | Out-Null }
+
+# Force-install uBlock Origin and prevent removal
+$uBlockConfig = '{"installation_mode":"force_installed","install_url":"https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi"}'
+Set-ItemProperty -Path $firefoxPolicyPath -Name "uBlock0@raymondhill.net" -Value $uBlockConfig
+```
+
+Once applied, the "Remove" and "Disable" buttons for uBlock Origin in Firefox will be hidden or greyed out, and the extension will be automatically re-installed if the browser profile is refreshed.
+
 ---
 
 ## Minimal Implementation (One-Click)
