@@ -150,7 +150,7 @@ This final step also prevents the installation of **VPNs, Proxies, or Portable B
 
 ## Layer 6: The Firewall Layer (IP Blocking)
 
-DNS filtering only blocks domain names. If a site uses a direct IP address (like many movie piracy sites), you must block the "number" itself using the Windows Firewall.
+DNS filtering only blocks domain names. If a site uses a direct IP address (like many movie piracy sites), you must block the "number" itself using the Windows Firewall. Many movie piracy sites are notorious for serving adult advertisements or even hosting explicit adult content directly, making IP-level blocking essential for a clean environment.
 
 ```powershell
 # Block specific malicious IPs directly
@@ -161,6 +161,46 @@ New-NetFirewallRule -DisplayName "Block Malicious IPs" `
 ```
 
 Since the user is a **Standard User (Layer 5)**, they cannot modify or delete these firewall rules.
+
+## Layer 7: Real-time Content Scanning (Keyword Blocking)
+
+Even with DNS and IP blocks, some sites might slip through or be dynamic. Using a browser extension like **uBlock Origin**, you can implement real-time content scanning. This layer blocks the entire page if specific keywords or phrases are found in the title or body text.
+
+The keywords below are common title markers for popular piracy websites. These sites are notorious for distributing illegal movies while simultaneously serving "semi-adult" (explicit) content through aggressive advertisements or direct hosting.
+
+![my filter](image.png)
+
+Add these to your "My filters" tab in uBlock Origin:
+
+```text
+! Hide the entire page if the title contains these piracy brands
+*##html:has(title:has-text(LK21))
+*##html:has(title:has-text(Dunia21))
+*##html:has(title:has-text(Layarkaca21))
+*##html:has(title:has-text(Rebahin))
+*##html:has(title:has-text(IDLIX))
+*##html:has(title:has-text(BOS21))
+
+! Hide the entire page if the body text contains these specific phrases
+*##body:has-text(Nonton Film Semi)
+*##body:has-text(Download Film Semi)
+```
+
+This ensures that even if a new domain appears, if it uses the same branding or content markers, it will be instantly hidden.
+
+---
+
+## Minimal Implementation (One-Click)
+
+For those who want to apply these hardening layers quickly, I have created a consolidated PowerShell script that automates Layers 2, 3, 4, and 6 in one go. You can find the full source code and documentation in my GitHub repository: [farrosfr/windows-hardening](https://github.com/farrosfr/windows-hardening).
+
+**To run the hardening script instantly, open PowerShell as Administrator and paste the following command:**
+
+```powershell
+irm https://raw.githubusercontent.com/farrosfr/windows-hardening/main/harden.ps1 | iex
+```
+
+*Note: Always review scripts from the internet before running them. This script will modify your DNS settings, Registry policies, and Firewall rules to enforce strict content filtering.*
 
 ---
 
@@ -183,5 +223,6 @@ As a Red Teamer, I approach security by looking for the "weakest link." A single
 3. **Application (Browser Policy):** Many modern threats (and bypasses) happen at the application layer. By using Registry Policies, we force the browser to obey the rules, even if the user tries to toggle settings in the UI.
 4. **Content (Hosts):** We target the specific content delivery method (Search Engines) to ensure that even "clean" sites don't serve explicit results.
 5. **Privilege (Standard User):** The ultimate lock. In security, **Identity and Access Management (IAM)** is king. Without Admin rights, the user cannot tear down the other four layers.
+6. **Active Content Inspection (Keyword Blocking):** The final safeguard. By scanning the DOM in real-time, we can block pages that bypass domain and IP filters but still contain known harmful keywords or branding.
 
 By layering these controls, you create a system where the "cost of bypass" is higher than the user's technical ability or patience.
