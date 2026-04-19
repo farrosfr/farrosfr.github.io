@@ -279,12 +279,12 @@ Once applied, the "Remove" and "Disable" buttons for uBlock Origin in Firefox wi
 
 ## Minimal Implementation (One-Click)
 
-For those who want to apply these hardening layers quickly, I have created a consolidated PowerShell script that automates Layers 2, 3, 4, and 6 in one go. You can find the full source code and documentation in my GitHub repository: [farrosfr/windows-hardening](https://github.com/farrosfr/windows-hardening).
+For those who want to apply these hardening layers quickly, I have created a consolidated PowerShell script that automates Layers 2, 3, 4, and 6 in one go. You can find the full source code and documentation in my GitHub repository: [farrosfr/noa](https://github.com/farrosfr/noa).
 
 **To run the hardening script instantly, open PowerShell as Administrator and paste the following command:**
 
 ```powershell
-irm https://raw.githubusercontent.com/farrosfr/windows-hardening/main/harden.ps1 | iex
+irm https://raw.githubusercontent.com/farrosfr/noa/main/harden.ps1 | iex
 ```
 
 *Note: Always review scripts from the internet before running them. This script will modify your DNS settings, Registry policies, and Firewall rules to enforce strict content filtering.*
