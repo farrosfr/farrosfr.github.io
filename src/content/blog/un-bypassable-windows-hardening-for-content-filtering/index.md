@@ -35,6 +35,8 @@ Even if the router is bypassed, the Windows network adapter acts as a secondary 
 
 ![Configuring IPv4 DNS settings](image-2.png)
 
+![alt text](image-1.png)
+
 Run this in PowerShell as Admin to force system-wide DNS. You have two options:
 
 ### Option A: Active Adapters Only (Standard)
@@ -164,9 +166,11 @@ Since the user is a **Standard User (Layer 5)**, they cannot modify or delete th
 
 ## Layer 7: Real-time Content Scanning (Keyword Blocking)
 
-Even with DNS and IP blocks, some sites might slip through or be dynamic. Using a browser extension like **uBlock Origin**, you can implement real-time content scanning. This layer blocks the entire page if specific keywords or phrases are found in the title or body text.
+Even with DNS and IP blocks, some sites might slip through or be dynamic. We can implement real-time content scanning at the browser level to block the entire page if specific keywords or phrases are found.
 
-The keywords below are common title markers for popular piracy websites. These sites are notorious for distributing illegal movies while simultaneously serving "semi-adult" (explicit) content through aggressive advertisements or direct hosting.
+### Option A: uBlock Origin (Static Blocking)
+
+Using a browser extension like **uBlock Origin**, you can implement real-time content scanning. The keywords below are common title markers for popular piracy websites that often serve "semi-adult" content.
 
 ![my filter](image.png)
 
@@ -186,7 +190,72 @@ Add these to your "My filters" tab in uBlock Origin:
 *##body:has-text(Download Film Semi)
 ```
 
-This ensures that even if a new domain appears, if it uses the same branding or content markers, it will be instantly hidden.
+### Option B: Tampermonkey (Advanced Redirects)
+
+For a more "educational" approach, you can use **Tampermonkey** to redirect the user to a specific video (e.g., a security awareness video) when a violation is detected. This method allows for complex logic, such as excluding trusted domains like Google or your own workspace.
+
+Create a new script in Tampermonkey and paste the following:
+
+```javascript
+// ==UserScript==
+// @name         Redirect Piracy Sites by Content
+// @namespace    http://tampermonkey.net/
+// @version      1.1
+// @description  Redirects the page to YouTube if specific piracy brands or text are found.
+// @match        *://*/*
+// @exclude      *://*.farros.co/*
+// @exclude      *://farros.co/*
+// @exclude      *://*.medium.com/*
+// @exclude      *://medium.com/*
+// @exclude      *://*.google.com/*
+// @exclude      *://google.com/*
+// @exclude      *://*.youtube.com/*
+// @exclude      *://youtube.com/*
+// @grant        none
+// @run-at       document-idle
+// ==/UserScript==
+
+(function() {
+    'use strict';
+
+    // The YouTube URL you want to redirect to
+    const targetURL = "https://www.youtube.com/watch?v=fbTlW1V2VuI&t=2726s";
+
+    // Regex for titles
+    const badTitles = [
+        /lk21/i, /dunia21/i, /layarkaca21/i, /rebahin/i, /idlix/i, /bos21/i, /indoxx1/i
+    ];
+
+    // Regex for body text
+    const badText = [
+        /nonton film semi/i, /download film semi/i
+    ];
+
+    let shouldRedirect = false;
+
+    // Check document title
+    if (document.title && badTitles.some(regex => regex.test(document.title))) {
+        shouldRedirect = true;
+    }
+
+    // Check body text
+    if (!shouldRedirect && document.body) {
+        const pageText = document.body.innerText || document.body.textContent;
+        if (badText.some(regex => regex.test(pageText))) {
+            shouldRedirect = true;
+        }
+    }
+
+    // Redirect to YouTube if a match is found
+    if (shouldRedirect) {
+        // Clear the page instantly to hide the content while the redirect happens
+        document.documentElement.innerHTML = '<h1 style="text-align:center; margin-top:20%; font-family:sans-serif;">Redirecting to Educational Content...</h1>';
+        window.location.replace(targetURL);
+    }
+})();
+```
+
+This ensures that even if a new domain appears, if it uses the same branding or content markers, it will be instantly hidden and redirected.
 
 ## Layer 8: Extension Persistence (The Force Install)
 
