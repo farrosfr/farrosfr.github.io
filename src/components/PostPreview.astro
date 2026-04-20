@@ -111,6 +111,7 @@ const postDate = data.updatedDate ?? data.publishDate
                   {data.tags.map((tag: string) => (
                     <li>
                       <Button as='a' title={tag} href={`/tags/${tag}/`} variant='pill' />
+
                     </li>
                   ))}
                 </ul>
