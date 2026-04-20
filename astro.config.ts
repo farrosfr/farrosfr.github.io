@@ -25,7 +25,7 @@ export default defineConfig({
   site: 'https://farros.co',
   // Deploy to a sub path; See https://astro-pure.js.org/docs/setup/deployment#platform-with-base-path
   // base: '/astro-pure/',
-  trailingSlash: 'never',
+  trailingSlash: 'always',
 
   // Adapter
   // https://docs.astro.build/en/guides/deploy/

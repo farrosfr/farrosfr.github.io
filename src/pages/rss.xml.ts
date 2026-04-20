@@ -59,7 +59,7 @@ const GET = async (context: AstroGlobal) => {
 
   return rss({
     // Basic configs
-    trailingSlash: false,
+    trailingSlash: true,
     xmlns: { h: 'http://www.w3.org/TR/html4/' },
     stylesheet: '/scripts/pretty-feed-v3.xsl',
 
