@@ -3,7 +3,7 @@ title: 'Astro SEO: Fixing Trailing Slash Issues on Cloudflare'
 publishDate: '2026-04-20'
 description: 'Learn how a mismatched trailing slash configuration between Astro and Cloudflare Pages caused a 70% drop in indexed pages and how I fixed the redirect loop.'
 tags: ['seo', 'astro', 'cloudflare', 'webdev']
-heroImage: { src: './1.png', color: '#223655' }
+heroImage: { src: './1.webp', color: '#223655' }
 ---
 
 ## The Shock: A Near-Zero Performance Drop
@@ -79,6 +79,33 @@ return rss({
 })
 ```
 
+## The Role of Astro Pure in the Architecture
+
+My site is built using the [Astro Pure](https://github.com/cworld1/astro-theme-pure) integration, which provides a robust set of SEO and performance tools out of the box.
+
+### Why this migration was tricky
+
+Astro Pure is designed to be a "plug-and-play" solution for technical bloggers. It handles:
+
+- **Automatic Schema.org Generation:** It builds a complex JSON-LD `@graph` for search engines.
+- **Dynamic Metadata:** It manages OpenGraph and Twitter cards automatically.
+
+However, because Astro Pure dynamically generates canonical URLs based on your `astro.config.ts`, the `trailingSlash: 'never'` setting was being "baked into" every single piece of metadata on the site. Astro Pure was well doing its job—it was just being told the wrong information by the framework configuration.
+
+**The Insight:** When using an advanced theme like Astro Pure, your framework settings are more critical. The theme's automation will amplify your configuration choices (good or bad) across every page of your site.
+
+## The Result: A Near-Perfect 98 Health Score
+
+After applying the trailing slash fixes across the configuration and internal links, I triggered a next crawl. The results were immediate as well. My Ahrefs Health Score jumped from a "Weak" 57 to an **"Excellent" 98**. Alhamdulillah
+
+![Ahrefs Success Score 98](./image6.png)
+
+### What changed?
+
+- **Canonical Errors:** Reduced to zero.
+- **Orphan Pages:** Resolved by updating internal links.
+- **Redirects:** Internal links now point directly to 200 OK pages, eliminating the 308 "bounce."
+
 ## Lessons Learned
 
 Moving from one host to another isn't just about moving files; it's about understanding how the new environment handles path normalization.
@@ -92,18 +119,4 @@ Moving from one host to another isn't just about moving files; it's about unders
 - [Cloudflare Pages: Pretty URLs Documentation](https://developers.cloudflare.com/pages/configuration/serving-pages/#pretty-urls)
 - [Google Search Central: Canonicalization Guide](https://developers.google.com/search/docs/crawling-indexing/canonicalization)
 
-After deploying this fix, I triggered a re-crawl in Ahrefs and requested re-indexing in Google Search Console.
-
-## Current Status: The Validation Phase (April 2026)
-
-As mostly SEO professional knows, **technical fixes are instant, but indexing is slow.** While the code changes are live and the redirect loops are technically resolved, it will take 1-2 weeks for Google and Ahrefs to fully update their dashboards.
-
-**Current Metrics:**
-
-- **Technical Fix:** Deployed & Verified (308 loops gone).
-- **Ahrefs Health Score:** 57 (Pending re-crawl).
-- **GSC Indexed Pages:** 57 (Pending re-index).
-
-I will be monitoring the Search Console. Once the "Health Score" returns to the 90s and my indexed page count recovers, I will post a follow-up article with the final "Before vs. After" data.
-
-**Stay tuned for the update!**
+This case study proves that even small architectural conflicts between your framework and your host can have massive consequences for your search presence. Try to verify your trailing slash behavior when migrating platforms!
