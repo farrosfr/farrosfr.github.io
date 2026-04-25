@@ -27,10 +27,6 @@ export default defineConfig({
   // base: '/astro-pure/',
   trailingSlash: 'always',
 
-  redirects: {
-    '/blog/[...slug]': '/p/[...slug]'
-  },
-
   // Adapter
   // https://docs.astro.build/en/guides/deploy/
   output: 'static',
