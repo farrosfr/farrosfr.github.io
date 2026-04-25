@@ -10,9 +10,9 @@ language: 'en'
 
 Integrating Google Analytics into Astro is relatively straightforward. However, if you're aiming for better performance and compatibility with features like View Transitions, you may need some additional configuration.
 
-> **Production Note:** This guide is based on experiments I ran on **[farros.co](https://farros.co)**. At the moment, Google Analytics is not installed there due to several considerations that will be discussed later.
+> **Production Note:** This guide is based on experiments I ran on **[farrosfr.com](https://farrosfr.com)**. At the moment, Google Analytics is not installed there due to several considerations that will be discussed later.
 
-This article continues from [Add Google Analytics to Astro: The Complete Guide](https://farros.co/blog/add-google-analytics-to-astro-the-complete-guide/). Here, we’ll refactor the setup using **Partytown** to offload third-party scripts, handle **View Transitions** more carefully, and update around five files.
+This article continues from [Add Google Analytics to Astro: The Complete Guide](https://farrosfr.com/blog/add-google-analytics-to-astro-the-complete-guide/). Here, we’ll refactor the setup using **Partytown** to offload third-party scripts, handle **View Transitions** more carefully, and update around five files.
 
 ## The Strategy: Performance & Accuracy
 

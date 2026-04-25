@@ -203,8 +203,8 @@ Create a new script in Tampermonkey and paste the following:
 // @version      1.1
 // @description  Redirects the page to YouTube if specific piracy brands or text are found.
 // @match        *://*/*
-// @exclude      *://*.farros.co/*
-// @exclude      *://farros.co/*
+// @exclude      *://*.farrosfr.com/*
+// @exclude      *://farrosfr.com/*
 // @exclude      *://*.medium.com/*
 // @exclude      *://medium.com/*
 // @exclude      *://*.google.com/*

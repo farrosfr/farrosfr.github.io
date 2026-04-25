@@ -1,6 +1,6 @@
-# Farros.co Website Repository
+# Farrosfr.com Website Repository
 
-This directory contains presets to help you quick-start your personal projects. The live version of this website can be viewed at [farros.co](https://farros.co/).
+This directory contains presets to help you quick-start your personal projects. The live version of this website can be viewed at [farrosfr.com](https://farrosfr.com/).
 
 ## 🚀 Tech Stack
 

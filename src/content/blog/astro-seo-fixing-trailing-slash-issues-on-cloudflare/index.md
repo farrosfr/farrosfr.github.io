@@ -18,7 +18,7 @@ At first, I was confused. I hadn't changed any content, and there were no securi
 
 ## The Context: Migrating from GitHub Pages to Cloudflare
 
-The timing of this drop aligned with my migration from GitHub Pages to **Cloudflare Pages**. I made the move because I needed more advanced features, better edge performance, and higher bandwidth for my research lab, `farros.co`.
+The timing of this drop aligned with my migration from GitHub Pages to **Cloudflare Pages**. I made the move because I needed more advanced features, better edge performance, and higher bandwidth for my research lab, `farrosfr.com`.
 
 On GitHub Pages, my setup worked well with `trailingSlash: false` in my Astro config. But Cloudflare Pages handles URLs differently.
 
@@ -46,11 +46,11 @@ By looking at the Ahrefs crawl details, I found the "bounce" pattern. It was a c
 ### How the conflict happened
 
 1. **Astro Config:** I had `trailingSlash: 'never'` in my `astro.config.ts`.
-2. **Canonical Tag:** Astro generated canonical links like `https://farros.co/blog/my-post` (no slash).
+2. **Canonical Tag:** Astro generated canonical links like `https://farrosfr.com/blog/my-post` (no slash).
 3. **Cloudflare Hosting:** Cloudflare Pages uses "Pretty URLs" by default. When it sees a directory-based build (which Astro uses for SSG), it **enforces** a trailing slash.
 4. **The Loop:**
-    - Googlebot visits `https://farros.co/blog/my-post/` (with slash).
-    - The HTML says: *"The official (canonical) version is `https://farros.co/blog/my-post` (no slash)."*
+    - Googlebot visits `https://farrosfr.com/blog/my-post/` (with slash).
+    - The HTML says: *"The official (canonical) version is `https://farrosfr.com/blog/my-post` (no slash)."*
     - Googlebot tries to go to the no-slash version.
     - Cloudflare catches the request and says: *"Nope, we use slashes here!"* and sends a **308 Permanent Redirect** back to the slash version.
 
@@ -63,7 +63,7 @@ The solution was to stop fighting the server and align Astro with Cloudflare's b
 ```typescript
 // astro.config.ts
 export default defineConfig({
-  site: 'https://farros.co',
+  site: 'https://farrosfr.com',
   trailingSlash: 'always', // Changed from 'never'
   // ...
 })
