@@ -49,7 +49,7 @@ Astro, with its flexibility, already had an answer for this. Besides the `'stati
 By switching the `output` in `astro.config.ts` to `'server'` and using an adapter like `@astrojs/netlify`, my site's architecture fundamentally changed:
 
 1. **No more per-content builds:** The site is no longer generated into thousands of HTML files during the build. Instead, Netlify deploys a serverless function.
-2. **Render on Demand:** When a user visits `/blog/new-article`, this function runs. It will contact the Headless CMS, fetch the data for `new-article`, render it into HTML on the fly, and send it to the user.
+2. **Render on Demand:** When a user visits `/p/new-article`, this function runs. It will contact the Headless CMS, fetch the data for `new-article`, render it into HTML on the fly, and send it to the user.
 
 The publishing workflow can also be changed to:
 

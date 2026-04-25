@@ -17,7 +17,7 @@ const socialImageURL = new URL(ogImage ? ogImage : config.socialCard, Astro.url)
 // --- Structured Data (Schema.org) ---
 const baseUrl = Astro.site?.origin || 'https://farrosfr.com'
 const isHome = Astro.url.pathname === '/'
-const isBlog = Astro.url.pathname.startsWith('/blog/') && articleDate
+const isBlog = Astro.url.pathname.startsWith('/p/') && articleDate
 
 // 1. Base Person Object
 const personSchema = {

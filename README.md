@@ -55,7 +55,7 @@ The main pages and routes are defined in `src/pages`:
 - `/`: The home page.
 - `/about`: The about page.
 - `/archives`: The archives page.
-- `/blog/[...id]`: Individual blog posts.
+- `/p/[...id]`: Individual blog posts.
 - `/projects`: The projects page.
 - `/search`: The search page.
 - `/tags/[tag]`: Pages for specific tags.

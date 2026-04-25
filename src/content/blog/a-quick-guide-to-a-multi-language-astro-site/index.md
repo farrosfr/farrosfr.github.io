@@ -20,12 +20,12 @@ The project uses a directory-based approach to separate content by language.
 * **English (Default):** English articles reside directly within the `src/content/blog/` directory.
 
   * Example path: `src/content/blog/my-english-post/index.md`
-  * Resulting URL: `https://your-site.com/blog/my-english-post`
+  * Resulting URL: `https://your-site.com/p/my-english-post`
 
 * **Indonesian:** All Indonesian articles **must** be placed inside a dedicated `id` subdirectory.
 
   * Example path: `src/content/blog/id/postingan-indonesia-saya/index.md`
-  * Resulting URL: `https://your-site.com/blog/id/postingan-indonesia-saya`
+  * Resulting URL: `https://your-site.com/p/id/postingan-indonesia-saya`
 
 -----
 
@@ -70,10 +70,10 @@ The core of this setup is passing the `language` value from the Markdown frontma
 
 This page reads the frontmatter and starts passing the `language` prop.
 
-**File:** `src/pages/blog/[...id].astro`
+**File:** `src/pages/p/[...id].astro`
 
 ```astro
-// src/pages/blog/[...id].astro
+// src/pages/p/[...id].astro
 ---
 // ... imports
 export async function getStaticPaths() { /* ... */ }
@@ -117,7 +117,7 @@ const {
 <PageLayout
   meta={{ /* ... */ }}
   highlightColor={primaryColor}
-  back='/blog'
+  back='/p'
   language={language} 
 >
   {/* ... rest of the layout */}

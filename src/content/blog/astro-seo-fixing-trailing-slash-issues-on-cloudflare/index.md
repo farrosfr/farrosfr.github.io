@@ -46,11 +46,11 @@ By looking at the Ahrefs crawl details, I found the "bounce" pattern. It was a c
 ### How the conflict happened
 
 1. **Astro Config:** I had `trailingSlash: 'never'` in my `astro.config.ts`.
-2. **Canonical Tag:** Astro generated canonical links like `https://farrosfr.com/blog/my-post` (no slash).
+2. **Canonical Tag:** Astro generated canonical links like `https://farrosfr.com/p/my-post` (no slash).
 3. **Cloudflare Hosting:** Cloudflare Pages uses "Pretty URLs" by default. When it sees a directory-based build (which Astro uses for SSG), it **enforces** a trailing slash.
 4. **The Loop:**
-    - Googlebot visits `https://farrosfr.com/blog/my-post/` (with slash).
-    - The HTML says: *"The official (canonical) version is `https://farrosfr.com/blog/my-post` (no slash)."*
+    - Googlebot visits `https://farrosfr.com/p/my-post/` (with slash).
+    - The HTML says: *"The official (canonical) version is `https://farrosfr.com/p/my-post` (no slash)."*
     - Googlebot tries to go to the no-slash version.
     - Cloudflare catches the request and says: *"Nope, we use slashes here!"* and sends a **308 Permanent Redirect** back to the slash version.
 
