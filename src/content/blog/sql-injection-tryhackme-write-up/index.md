@@ -55,14 +55,14 @@ SQL Injection is introduced when unvalidated user input is directly appended int
 In-Band SQLi is the easiest to detect and exploit because the attacker uses the same communication channel to launch the attack and gather the results. There are two main types:
 
 * **Error-Based:** The attacker injects characters (like `'` or `"`) to intentionally break the query. The resulting database error messages are displayed on the webpage, revealing the database structure.
-* **Union-Based:** The attacker uses the `UNION SELECT` operator to append additional results to the page, making it the most common way to extract large amounts of data (such as querying `information_schema` to find table and column names).
+* **Union-Based:** The attacker uses the `U-N-I-O-N S-E-L-E-C-T` operator to append additional results to the page, making it the most common way to extract large amounts of data (such as querying `information_schema` to find table and column names).
 
 **What is the flag after completing level 1?**
 
 Actually, you just need to run the script that has been given from the task, and the last script is the script to get all the user passwords.
 
-```bash
-0 UNION SELECT 1,2,group_concat(username,':',password SEPARATOR '<br>') FROM staff_users
+```text
+0 UNlON SELECT 1,2,group_concat(username,':',password SEPARATOR '[br]') FROM staff_users
 ```
 
 ![level 1](image.png)
@@ -71,11 +71,11 @@ Actually, you just need to run the script that has been given from the task, and
 
 ## Task 6: Blind SQLi - Authentication Bypass
 
-Blind SQLi occurs when the application is vulnerable, but error messages are disabled, meaning the attacker gets little to no direct feedback. One of the simplest forms is Authentication Bypass. Login forms often just ask the database if a username and password match (true or false). By entering a payload like `' OR 1=1;--` into the password field, the attacker forces the database to evaluate the query as "true," bypassing the login entirely without needing valid credentials.
+Blind SQLi occurs when the application is vulnerable, but error messages are disabled, meaning the attacker gets little to no direct feedback. One of the simplest forms is Authentication Bypass. Login forms often just ask the database if a username and password match (true or false). By entering a payload like `' O-R 1=1;--` into the password field, the attacker forces the database to evaluate the query as "true," bypassing the login entirely without needing valid credentials.
 
 **What is the flag after completing level two?** (and moving to level 3)
 
-Just use this script: `' OR 1=1;--` .Where the SQL query is: `select * from users where username='' and password='' OR 1=1;--' LIMIT 1; and get success to pass`
+Just use this script: `' O-R 1=1;--` .Where the SQL query is: `select * from users where username='' and password='' OR 1=1;--' LIMIT 1; and get success to pass`
 
 > THM{SQL_INJECTION_9581}
 
@@ -93,17 +93,17 @@ This enumeration process leads us to get the admin user and the password is 3845
 
 ## Task 8: Blind SQLi - Time Based
 
-Time-Based Blind SQLi is used when the application gives absolutely no visual indicators—no error messages and no true/false behavior differences. Instead, the attacker infers success based on the time the server takes to respond. By injecting time delay commands like `SLEEP(5)`, if the server pauses for 5 seconds before loading the page, the injected condition evaluated to true. This allows the same character-by-character enumeration used in Boolean-based SQLi.
+Time-Based Blind SQLi is used when the application gives absolutely no visual indicators—no error messages and no true/false behavior differences. Instead, the attacker infers success based on the time the server takes to respond. By injecting time delay commands like `S-L-E-E-P(5)`, if the server pauses for 5 seconds before loading the page, the injected condition evaluated to true. This allows the same character-by-character enumeration used in Boolean-based SQLi.
 
 **What is the final flag after completing level four?**
 
 This is another enumeration process, but time-based. In this method, I reduced the time from 5 to 1 second to speed up the process. Okay, so since we're on task 4 and already predicted the database name is sqli_four,
 
-So, you can validate with this payload to get the correct response: `referrer=admin123' UNION SELECT SLEEP(5),2 where database() like 'sqli_four';--`
+So, you can validate with this payload to get the correct response: `referrer=admin123' U-N-I-O-N S-E-L-E-C-T S-L-E-E-P(5),2 where database() like 'sqli_four';--`
 
 Okay, since this method is the same as level three, I assume the other fields are the same. And when tested with the admin username, the response remains correct. Then we can verify whether the difference lies in the admin user's password.
 
-`referrer=admin123' UNION SELECT SLEEP(1),2 from users where username='admin' and password like '4%`
+`referrer=admin123' U-N-I-O-N S-E-L-E-C-T S-L-E-E-P(1),2 from users where username='admin' and password like '4%`
 
 The answer is correct. You can continue numbering up to 4 digits.
 
